@@ -1,8 +1,14 @@
 ---
 id: EA-002
 title: Capability Design Specification (CDS)
-version: 1.0
+version: 1.1
 status: Approved
+traceability:
+  capability:
+  design:
+  delivery:
+  adr: []
+  prr:
 ---
 
 # EA-002: Capability Design Specification (CDS)
@@ -13,7 +19,18 @@ The **Capability Design** is the Engineering Object that models how a specific c
 
 The **Capability Design Specification (CDS)** is the engineering asset (this document) that represents and records that design. It is the storage mechanism for the information, not the capability design itself.
 
-## 2. Invariants (Constraint Model)
+## 2. Knowledge Flow
+
+### Consumes
+- EA-001 (Capability Blueprint)
+- Applicable Standards
+
+### Produces
+- Capability Design
+- Technical Architecture
+- Design Decisions
+
+## 3. Invariants (Constraint Model)
 
 Every Capability Design Specification must adhere to the following invariants:
 - **Traceability Root:** Must explicitly trace back to exactly one Capability Blueprint ID (`CAP-ID`).
@@ -22,7 +39,7 @@ Every Capability Design Specification must adhere to the following invariants:
 - **Single Source of Truth:** Must be the sole reference for API contracts, database schemas, and system interactions for its parent capability.
 - **Immutability:** Cannot be materially modified after approval without a formal version bump.
 
-## 3. Boundary of Responsibility
+## 4. Boundary of Responsibility
 
 The Capability Design has strict boundaries separating it from business strategy upstream and production execution downstream.
 
@@ -44,7 +61,7 @@ The Capability Design has strict boundaries separating it from business strategy
 - Step-by-Step Implementation Tasks (owned by EA-003)
 - Sprint Planning or Agile Epics
 
-## 4. Capability Design Model
+## 5. Capability Design Model
 
 The design is represented through a multi-view model rather than a flat document. Every CDS must cover these views:
 
@@ -55,7 +72,7 @@ The design is represented through a multi-view model rather than a flat document
 5. **Operational View:** Observability, logging, metrics, tracing, health checks, alerts, recovery.
 6. **Decision View:** Design principles, technical assumptions, inherited constraints, and alternatives considered.
 
-## 5. Lifecycle Management
+## 6. Lifecycle Management
 
 ### CDS Artifact Lifecycle
 `Draft` ➔ `Under Review` ➔ `Approved` ➔ `Archived`
@@ -63,14 +80,14 @@ The design is represented through a multi-view model rather than a flat document
 ### Capability Design Object Lifecycle
 `Architected` ➔ `Validated` (via technical review) ➔ `Realized` (via EA-003/Code) ➔ `Deprecated`
 
-## 6. Ownership Model
+## 7. Ownership Model
 
 - **Producer (Author):** Software Architect or Lead Engineer.
 - **Consumers:** Software Engineers, QA Engineers, DevOps (feeding into EA-003).
 - **Approvers:** Architecture Board / Principal Engineers & Security Lead.
 - **Custodian:** The Engineering Asset Library repository.
 
-## 7. Review Strategy & Exit Criteria
+## 8. Review Strategy & Exit Criteria
 
 Before transitioning to the next phase (EA-003), the CDS must pass:
 1. **Traceability Review:** Does this design perfectly address the requirements of the EA-001 Blueprint without omitting features or inventing unrequested ones?
@@ -78,7 +95,7 @@ Before transitioning to the next phase (EA-003), the CDS must pass:
 3. **Architecture Alignment Review:** Does this align with broader system design and quality attributes?
 4. **Completeness Review (Exit Criterion):** Is the design unambiguous enough that the Capability Production Specification (EA-003) can be immediately constructed without fundamental architectural questions?
 
-## 8. Definition of Finished
+## 9. Definition of Finished
 
 A Capability Design Specification is "Finished" when it is:
 - **Approved** by Architecture and Security authorities.
@@ -90,7 +107,7 @@ A Capability Design Specification is "Finished" when it is:
 
 ---
 
-## 9. Capability Design Specification Structure (The Representation)
+## 10. Capability Design Specification Structure (The Representation)
 
 When authoring a CDS, construct it using the Design Views:
 
@@ -101,7 +118,7 @@ Must include `id` (e.g., CDS-001), `parent_cap_id` (Traceability), `title`, `ver
 - **Design Principles:** Guiding constraints (e.g., Stateless, API First, Idempotent).
 - **Technical Assumptions:** (e.g., External API SLAs, Network Latency, Infrastructure availability).
 - **Constraints:** Inherited from EA-001 + emerging Technical/Architectural Constraints.
-- **Alternatives Considered:** Options evaluated and why the chosen solution won (avoids ADR explosion).
+- **Alternatives Considered:** Record **local design alternatives** that remain within the scope of this Capability Design (e.g., REST vs GraphQL, sync vs async, component decomposition). If a decision has **system-wide, long-term, cross-capability, or architectural impact**, it must be documented in an EA-004 ADR. In such cases, link the ADR here rather than duplicating the analysis.
 - **Risks & Trade-offs:** Known limitations and future improvements.
 
 ### 2. Architecture View

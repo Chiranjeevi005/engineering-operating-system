@@ -1,7 +1,7 @@
 ---
 id: EA-005
 title: Production Readiness Review (PRR)
-version: 1.0
+version: 1.1
 status: Approved
 traceability:
   capability: ""
@@ -22,7 +22,18 @@ The **Production Readiness Review (PRR)** is the engineering asset (this documen
 Every EA-005 exists to answer exactly one question:
 > *"What objective evidence demonstrates that this capability is ready for production?"*
 
-## 2. Invariants (Constraint Model)
+## 2. Knowledge Flow
+
+### Consumes
+- EA-003 (Capability Delivery Specification)
+- Delivery Evidence (Test Results, Scans, etc.)
+
+### Produces
+- Production Readiness Decision
+- Release Approval
+- Known Operational Risks
+
+## 3. Invariants (Constraint Model)
 
 To maintain its integrity as the final engineering gate, every PRR must satisfy the following constraints:
 - **Scope Alignment:** Must evaluate exactly one capability or release (tracing back to a specific `CAP-ID` / `CDS-ID`).
@@ -32,7 +43,7 @@ To maintain its integrity as the final engineering gate, every PRR must satisfy 
 - **Mandatory Evidence:** Missing mandatory evidence means the PRR cannot pass.
 - **Immutability:** Immutable after the final decision is approved.
 
-## 3. Boundary of Responsibility
+## 4. Boundary of Responsibility
 
 ### Must Define
 - Production evidence (Testing, security, performance).
@@ -53,7 +64,7 @@ To maintain its integrity as the final engineering gate, every PRR must satisfy 
 - Managing implementation tasks or sprints (External issue trackers).
 - Defining the delivery testing strategy (Owned by EA-003).
 
-## 4. Production Readiness Model
+## 5. Production Readiness Model
 
 The PRR is structured around specific evaluation Views rather than a massive checklist.
 
@@ -63,7 +74,7 @@ The PRR is structured around specific evaluation Views rather than a massive che
 4. **Compliance View:** Compliance categories adherence (Security, Privacy, Regulatory, Licensing, Organizational Policy).
 5. **Decision View:** The final recommendation (Go, Conditional Go, Deferred, No-Go), reasons, and approvers.
 
-## 5. Evidence Levels & Freshness
+## 6. Evidence Levels & Freshness
 
 To eliminate subjectivity, every readiness criterion must be assessed using standardized Evidence Levels and tracked for freshness:
 
@@ -81,7 +92,7 @@ Every piece of evidence must record:
 - **Evidence Owner:** Who verified it.
 - **Evidence Source:** Where to find it (e.g., CI Pipeline #1542).
 
-## 6. Lifecycle Management
+## 7. Lifecycle Management
 
 ### PRR Artifact Lifecycle
 `Draft` ➔ `Review` ➔ `Approved` ➔ `Archived`
@@ -89,14 +100,14 @@ Every piece of evidence must record:
 ### Production Readiness Object Status
 `Preparing` (Gathering evidence) ➔ `Evaluating` (Under review) ➔ `Ready` (Approved for release) ➔ `Released` (In production)
 
-## 7. Ownership Model
+## 8. Ownership Model
 
 - **Producer (Author):** Engineering Lead.
 - **Consumers:** Operations, Support, Product.
 - **Approvers:** Engineering Manager, Operations Lead, Security Lead.
 - **Custodian:** The Engineering Asset Library repository.
 
-## 8. Review Strategy
+## 9. Review Strategy
 
 The final gate requires multi-disciplinary validation:
 - **Evidence Review:** Does the testing evidence (E1-E3) prove the capability works as designed and is fresh?
@@ -105,7 +116,7 @@ The final gate requires multi-disciplinary validation:
 - **Compliance Review:** Does this violate any organizational or regulatory policies?
 - **Release Decision:** The final binding vote.
 
-## 9. Definition of Finished
+## 10. Definition of Finished
 
 A Production Readiness Review is "Finished" (allowing the release to proceed) when it is:
 - **Approved** by all required authorities.
@@ -118,7 +129,7 @@ A Production Readiness Review is "Finished" (allowing the release to proceed) wh
 
 ---
 
-## 10. Production Readiness Review Structure (The Representation)
+## 11. Production Readiness Review Structure (The Representation)
 
 When authoring a new PRR, construct it using the following format.
 

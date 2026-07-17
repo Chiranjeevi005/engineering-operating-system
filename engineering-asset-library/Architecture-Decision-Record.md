@@ -1,8 +1,14 @@
 ---
 id: EA-004
 title: Architecture Decision Record (ADR)
-version: 1.0
+version: 1.1
 status: Approved
+traceability:
+  capability:
+  design:
+  delivery:
+  adr: []
+  prr:
 ---
 
 # EA-004: Architecture Decision Record
@@ -18,7 +24,17 @@ Unlike EA-001, EA-002, and EA-003, which are sequential stages of capability del
 Every EA-004 exists to answer exactly one question:
 > *"Why was this architectural decision made, what alternatives were considered, and what are the long-term consequences?"*
 
-## 2. Invariants (Constraint Model)
+## 2. Knowledge Flow
+
+### Consumes
+- EA-002 (Capability Design Specification) or systemic Engineering Context
+
+### Produces
+- Approved Architecture Decision
+- Decision Rationale
+- Architectural Constraints
+
+## 3. Invariants (Constraint Model)
 
 To maintain its value as the smallest, most focused asset in the library, every ADR must adhere to:
 - **Single Focus:** Exactly one architectural decision per ADR.
@@ -29,7 +45,7 @@ To maintain its value as the smallest, most focused asset in the library, every 
 - **Immutability:** Immutable after approval.
 - **Forward-Only Evolution:** New decisions or reversals require creating new ADRs that supersede older ones; old ADRs are never silently modified.
 
-## 3. Decision Scope
+## 4. Decision Scope
 
 ### Must Define
 - Problem (The specific challenge being solved)
@@ -53,7 +69,7 @@ To maintain its value as the smallest, most focused asset in the library, every 
 - Sprint planning or execution tasks (Owned by external trackers)
 - Testing strategy (Owned by EA-003)
 
-## 4. Architecture Decision Model
+## 5. Architecture Decision Model
 
 The ADR is modeled around specific evaluation views:
 
@@ -64,7 +80,7 @@ The ADR is modeled around specific evaluation views:
 5. **Traceability View:** Which capabilities are affected? Which CDS documents depend on this? Which other ADRs are related?
 6. **Evolution View:** Can this decision be superseded later? What triggers a re-evaluation?
 
-## 5. Lifecycle Management
+## 6. Lifecycle Management
 
 ### ADR Artifact Lifecycle
 `Draft` ➔ `Review` ➔ `Approved` ➔ `Superseded` ➔ `Archived`
@@ -84,14 +100,14 @@ Proposed ─────┤
 Once accepted, the lifecycle continues:
 `Accepted` ➔ `Applied` ➔ `Superseded` ➔ `Archived`
 
-## 6. Ownership Model
+## 7. Ownership Model
 
 - **Producer (Author):** Architecture Lead or Senior Engineer.
 - **Consumers:** Engineering Teams, Future Architects.
 - **Approver:** Architecture Board or Principal Engineers.
 - **Custodian:** The Engineering Asset Library repository.
 
-## 7. Review Strategy
+## 8. Review Strategy
 
 Before an ADR transitions from Proposed to Accepted, it must be evaluated for:
 - **Decision Quality:** Is the chosen solution structurally sound?
@@ -99,7 +115,7 @@ Before an ADR transitions from Proposed to Accepted, it must be evaluated for:
 - **Risk Assessment:** Are the trade-offs and consequences fully understood and acceptable?
 - **Completeness:** Are the alternatives accurately represented?
 
-## 8. Definition of Finished
+## 9. Definition of Finished
 
 An Architecture Decision Record is "Finished" (ready to be relied upon by EA-002/EA-003) when it is:
 - **Approved** by the Architecture Board.
@@ -109,7 +125,7 @@ An Architecture Decision Record is "Finished" (ready to be relied upon by EA-002
 - **Consequences Recorded** explicitly.
 - **Linked** to any dependent CDS (EA-002) or related ADRs.
 
-## 9. Decision Categories
+## 10. Decision Categories
 
 To ensure the library remains searchable and reportable as it scales, every ADR must be tagged with a primary category:
 - `Application Architecture`
@@ -125,7 +141,7 @@ To ensure the library remains searchable and reportable as it scales, every ADR 
 
 ---
 
-## 10. Architecture Decision Record Structure (The Representation)
+## 11. Architecture Decision Record Structure (The Representation)
 
 When authoring a new ADR, construct it using the following minimal structure:
 
