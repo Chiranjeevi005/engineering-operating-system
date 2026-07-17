@@ -135,3 +135,90 @@ Project Standards (Project-Specific Stack)
   ↓
 Engineering Assets (TypeScript Codebases)
 ```
+
+---
+
+## 5. Technology Foundation
+
+### 5.1 Enterprise Technology Decision
+
+* **Why the enterprise approved TypeScript:** The enterprise approved TypeScript to bring structural predictability, static verification, and improved developer ergonomics to large-scale JavaScript applications. By adopting TypeScript, the enterprise systematically shifts the discovery of interface mismatches and property errors from runtime to compile time.
+* **Strategic role inside EOS:** TypeScript serves as the strategic, universal language for all web, edge, and Node.js-based backend engineering. It allows the enterprise to standardize tooling, maximize code reuse, and share engineering talent across different architectural boundaries.
+* **Business value:** It significantly reduces production incidents caused by untyped data structures, accelerates developer onboarding by providing self-documenting code, and protects long-term digital asset investments.
+* **Engineering value:** It enables fearless refactoring across millions of lines of code, ensures strict API contract adherence between distributed systems, and integrates seamlessly with enterprise-grade IDEs for instantaneous feedback.
+* **Long-term maintainability:** TypeScript's structural typing ensures that as projects scale and teams rotate, the intent and shape of the data remain explicitly codified rather than relying on tribal knowledge.
+* **Why compile-time verification matters:** The cost of identifying a defect during active compilation is exponentially lower than discovering it through a failed deployment or customer-reported incident.
+* **Why consistency matters:** A unified language profile ensures that every engineer across the enterprise reads, writes, and reasons about code using the same foundational constraints, eliminating costly paradigm shifts when moving between projects.
+
+### 5.2 Technology Purpose
+
+* **Core purpose:** TypeScript exists to add optional static typing to JavaScript, transforming a highly dynamic language into a predictable, robust enterprise tool.
+* **Primary responsibilities:** Its primary responsibility is compile-time type checking, emitting modern, standards-compliant JavaScript, and enabling advanced editor tooling.
+* **Problems TypeScript is intended to solve:** It solves the unpredictability of dynamic typing, the difficulty of managing complex data structures in pure JavaScript, the brittleness of large-scale refactoring, and the lack of explicit interface definitions in loosely coupled systems.
+* **Enterprise expectations:** The enterprise expects TypeScript to be used as a defensive engineering tool—enforcing strict boundaries, preventing implicit behaviors, and explicitly modeling business domains.
+
+### 5.3 Engineering Capabilities
+
+* **Static typing:** Enables developers to explicitly define the shape, boundaries, and expected types of variables, parameters, and return values, allowing the compiler to catch mismatches.
+* **Type inference:** Automatically deduces the types of variables based on their initialization, providing the safety of static typing without excessive boilerplate.
+* **Compile-time validation:** Analyzes the entire codebase prior to execution, blocking builds that violate defined type constraints and ensuring structural integrity.
+* **Object-oriented programming:** Provides robust support for classes, interfaces, inheritance, and access modifiers (public, private, protected), aligning with classical enterprise architecture patterns.
+* **Modern ECMAScript support:** Enables developers to use future JavaScript features (ESNext) today, transpiling them down to versions compatible with current enterprise target runtimes.
+* **Tooling ecosystem:** Exposes a powerful compiler API that serves as the foundation for enterprise linters, formatters, and static analysis tools.
+* **IDE integration:** Powers deep editor integrations (e.g., autocomplete, inline documentation, jump-to-definition) that drastically improve engineering velocity and accuracy.
+* **Refactoring support:** Allows for safe, automated codebase-wide renames, extractions, and structural changes powered by precise type awareness.
+* **API contract modeling:** Facilitates the exact mapping of external system contracts (e.g., REST or GraphQL schemas) directly into application types.
+* **Maintainability:** Provides a scalable foundation where the addition of new features does not exponentially increase the cognitive load required to understand the existing system.
+
+### 5.4 Enterprise Use Cases
+
+TypeScript is the approved enterprise technology for:
+* **Frontend applications:** Browser-based user interfaces, single-page applications (SPAs), and micro-frontends.
+* **Backend services:** Server-side applications, microservices, and serverless functions utilizing Node.js or compatible runtimes.
+* **APIs:** The implementation of REST, GraphQL, or gRPC interfaces.
+* **Edge applications:** Logic deployed to edge computing networks and CDNs.
+* **Libraries:** Reusable enterprise components, utility modules, and design systems.
+* **SDKs:** Client generation and API consumption wrappers.
+
+### 5.5 Non-Recommended Use Cases
+
+TypeScript should NOT be selected for:
+* **Extremely small scripts:** Throwaway scripts or basic CI/CD pipeline automation where the overhead of compilation outweighs the benefits of type safety.
+* **One-time automation:** Ephemeral tasks that will not be maintained, shared, or extended.
+* **Unsupported runtimes:** Environments explicitly designed for other languages (e.g., systems programming requiring C/Rust) or runtimes that lack mature TypeScript support.
+* **Situations where another enterprise-approved technology is more appropriate:** Highly specialized computational tasks, data science workloads (where Python is approved), or high-performance concurrent processing (where Go/Rust are approved).
+
+### 5.6 Technology Strengths
+
+* **Maintainability:** Codebases remain readable and structurally sound even as they scale beyond hundreds of thousands of lines of code.
+* **Predictability:** Eliminates the ambiguity of "undefined is not a function" and implicit type coercions.
+* **Readability:** Types act as continuous, machine-verified documentation, making the intent of the code immediately obvious.
+* **Collaboration:** Enables distributed teams to confidently consume shared libraries and APIs based on strictly enforced contracts.
+* **Scalability:** The compilation pipeline scales efficiently across enterprise mono-repos and poly-repos.
+* **Refactoring:** Transforms dangerous, manual string-replacement refactoring into safe, compiler-guided architectural shifts.
+* **Safety:** Dramatically reduces the surface area for common runtime vulnerabilities caused by unexpected input structures.
+* **Ecosystem maturity:** Benefits from the massive npm ecosystem via "DefinitelyTyped", ensuring almost all enterprise dependencies possess high-quality type definitions.
+
+### 5.7 Technology Limitations
+
+* **Build step requirement:** TypeScript cannot be executed directly by standard browsers or basic Node.js environments; it mandates a compilation/transpilation step in the build pipeline.
+* **Learning curve:** Teams transitioning from pure dynamic languages face a learning curve regarding advanced type theory (e.g., generics, mapped types, conditional types).
+* **Type erasure:** TypeScript types exist only at compile time. At runtime, all type information is erased, meaning TypeScript cannot validate data structures inherently at runtime without third-party validation libraries.
+* **Runtime limitations:** TypeScript does not optimize runtime performance; the execution speed is identical to the underlying transpiled JavaScript.
+* **Dependency on JavaScript ecosystem:** TypeScript inherits the complexities, package management challenges, and supply-chain risks of the broader JavaScript and npm ecosystem.
+
+### 5.8 Compatibility
+
+* **JavaScript:** TypeScript is a strict superset of JavaScript. Any valid JS is valid TS, allowing for incremental adoption in legacy enterprise systems.
+* **ECMAScript:** TypeScript continuously tracks the ECMAScript standard, providing seamless compatibility with evolving web standards.
+* **Node.js:** Fully compatible with Node.js through transpilation or runtime wrappers (e.g., ts-node), forming the backbone of enterprise JS backend services.
+* **Browser runtimes:** The emitted JavaScript is fully compatible with all enterprise-approved modern browsers based on the targeted compilation version.
+* **Enterprise tooling:** Deeply integrated into standard enterprise tooling, including SonarQube, GitHub Actions, ESLint, and standard CI/CD orchestrators.
+
+### 5.9 Supported Versions
+
+* **Enterprise-supported TypeScript versions:** The enterprise exclusively supports the current major/minor release and the immediately preceding major/minor release (N and N-1).
+* **Version support policy:** Project Standards must mandate compilation using an enterprise-supported version to ensure consistent type-checking behavior across all teams.
+* **LTS strategy:** Projects should align their TypeScript version with the LTS (Long-Term Support) lifecycles of their underlying framework and runtime environments.
+* **Upgrade philosophy:** The enterprise advocates for continuous, incremental upgrades. Teams should routinely update compiler versions to leverage improved type inference and performance enhancements rather than delaying upgrades for years.
+* **Deprecation philosophy:** Versions older than N-2 are considered deprecated and represent technical debt. Codebases utilizing deprecated versions are prohibited from passing automated enterprise quality gates until upgraded.
