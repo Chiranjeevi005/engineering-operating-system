@@ -128,12 +128,30 @@ A complete Project Standard MUST deliver:
 
 ## 23. Project Standard Composition
 
-Every future Project Standard MUST contain the following baseline structural sections:
-* **Project Identity:** Name and scope of the product.
-* **Inheritance:** Explicit declaration of the parent Starter Kit.
-* **Architecture & Tech Stack:** Project-specific domain architectures and chosen infrastructural technologies.
-* **Repository & Workflow:** Branching strategy, commit conventions, and peer review rules.
-* **Definition of Ready & Done:** The project-specific quality gates required for execution.
+Every Project Standard MUST contain the following sections:
+
+1. Project Identity
+2. Project Vision
+3. Business Objectives
+4. Scope
+5. Stakeholders
+6. Inheritance
+7. Technology Stack
+8. Architecture
+9. Repository Standards
+10. Development Workflow
+11. Coding Standards
+12. Quality Standards
+13. Testing Strategy
+14. Security Requirements
+15. Deployment Strategy
+16. Monitoring & Observability
+17. Documentation Standards
+18. Definition of Ready
+19. Definition of Done
+20. ADR Index
+21. Risk Register
+22. Version History
 
 ## 24. Project Standard Anti-Patterns
 
@@ -142,3 +160,41 @@ The following practices destroy the value of Project Standards and MUST NOT be p
 * **The Phantom Standard:** Creating a Project Standard that does not reflect the actual workflows and architecture used by the engineering team.
 * **The Governance Bypass:** Using the Project Standard as a loophole to explicitly disable enterprise security or quality gates.
 * **The Theoretical Standard:** Defining rules and workflows that are entirely manual and lack CI/CD or tooling enforcement.
+
+## 25. Project Lifecycle
+
+Every project within the EOS MUST adhere to the following universal lifecycle:
+
+```text
+Inception
+
+↓
+
+Planning
+
+↓
+
+Development
+
+↓
+
+Testing
+
+↓
+
+Release
+
+↓
+
+Operations
+
+↓
+
+Maintenance
+
+↓
+
+Retirement
+```
+
+The Project Standard MUST govern the workflows spanning this entire lifecycle.

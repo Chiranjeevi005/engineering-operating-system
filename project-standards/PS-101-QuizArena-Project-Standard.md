@@ -1,42 +1,111 @@
 # PS-101 QuizArena Project Standard
 
 ## 1. Project Identity
+**Project Name:** QuizArena
+**Type:** Real-time Multiplayer Quiz Platform
+**Governing Standard:** PS-001 (Project Standards Foundation)
 
-This document establishes the specific engineering standards and operational rules for **QuizArena**. It serves as the definitive source of truth for how the QuizArena team builds, tests, and delivers the product.
+## 2. Project Vision
+To become the enterprise's premier interactive learning and assessment platform, gamifying technical knowledge checks through real-time multiplayer arenas.
 
-## 2. Inheritance
+## 3. Business Objectives
+- Increase employee engagement in technical training by 40%.
+- Provide measurable skill assessments via competitive arenas.
+- Ensure the platform scales to support 10,000 concurrent participants during company-wide events.
 
-QuizArena is governed by the Engineering Operating System (EOS). This project standard strictly inherits from:
-* **PS-001:** Project Standards Foundation
-* **SK-101:** TypeScript Starter Kit (Executable Baseline)
+## 4. Scope
+QuizArena encompasses the core game engine, the real-time multiplayer WebSocket server, the web-based player interface, and the administration dashboard for question management.
 
-## 3. Technology Stack Decisions
+## 5. Stakeholders
+- **Product Owner:** (To be assigned)
+- **Technical Lead:** (To be assigned)
+- **Security Reviewer:** Enterprise InfoSec Team
+- **Sponsors:** Engineering Leadership
 
-QuizArena uses the enterprise default stack provided by SK-101, with the following project-specific decisions:
-* **Language:** TypeScript (Strict Mode)
-* **Runtime:** Node.js
-* **Package Manager:** npm
+## 6. Inheritance
+QuizArena strictly inherits from the following EOS baselines:
+- **Project Standards:** PS-001
+- **Starter Kit:** SK-101 (TypeScript Executable Baseline)
 
-*(Note: As QuizArena evolves and requires new capabilities—such as a Next.js frontend or a specific database ORM—these decisions will be recorded here via Architecture Decision Records (ADRs). If these capabilities prove universally reusable, they will be extracted into a new enterprise Starter Kit like SK-301).*
+## 7. Technology Stack
+- **Language:** TypeScript
+- **Backend Runtime:** Node.js
+- **Frontend Framework:** (Pending ADR - likely React/Next.js)
+- **Database:** PostgreSQL (Primary), Redis (Real-time state and caching)
+- **Communication:** REST APIs and WebSockets
 
-## 4. Repository & Workflow
+## 8. Architecture
+QuizArena follows Domain-Driven Design (DDD):
+- **Core Domain:** Matchmaking, Quiz Sessions, Scoring Algorithms.
+- **Application:** Session Coordinators, Leaderboard Aggregation.
+- **Infrastructure:** Prisma ORM (PostgreSQL), Redis Pub/Sub.
 
-Inheriting from PS-001, QuizArena enforces the following:
-* **Primary Branch:** `main` (Protected).
-* **Branching Model:** Short-lived feature branches (`feature/<description>`).
-* **Commits:** Conventional Commits are mandatory for automated changelog generation.
+## 9. Repository Standards
+- **Source Control:** Git
+- **Primary Branch:** `main` (Protected, requires 1 code review and all passing CI gates).
+- **Access:** Principle of least privilege enforced via enterprise IAM.
 
-## 5. Definition of Ready & Done
+## 10. Development Workflow
+- **Branching:** Trunk-based development. Feature branches MUST be short-lived (`feature/<ticket>-<description>`).
+- **Commits:** Conventional Commits are mandatory.
+- **Local Dev:** Use Docker Compose for local database/cache spinning.
 
-QuizArena adheres strictly to the EOS Definitions defined in PS-001. No feature may be merged without:
-* Passing all automated tests (Jest).
-* Passing strict static analysis (ESLint/Prettier) with 0 warnings.
-* Updating the relevant architectural documentation if structural boundaries are modified.
+## 11. Coding Standards
+- Strictly adheres to the EP-101 TypeScript Engineering Profile.
+- Absolute ban on `any` types and implicit type casting.
+- Business logic MUST NOT be coupled to the web framework.
 
-## 6. Project Architecture
+## 12. Quality Standards
+- **Static Analysis:** ESLint and Prettier executed via pre-commit hooks.
+- **Test Coverage:** Minimum 85% branch coverage required for the Domain and Application layers.
 
-QuizArena utilizes the canonical layer separation enforced by SK-101:
-* **Presentation:** (To be defined—e.g., REST API controllers, CLI, or UI).
-* **Application:** Orchestrates quiz sessions, scoring, and user workflows.
-* **Domain:** Contains the pure business rules of the quiz (Questions, Answers, Matchmaking, Scoring logic).
-* **Infrastructure:** Manages state persistence and external service integrations.
+## 13. Testing Strategy
+- **Unit Tests (Jest):** High density, isolating domain logic.
+- **Integration Tests:** Validating Infrastructure implementations against test databases.
+- **E2E Tests:** (To be defined, likely Playwright).
+
+## 14. Security Requirements
+- **Authentication:** OAuth 2.0 / OpenID Connect via the Enterprise Identity Provider.
+- **Data Protection:** User emails and PII must be encrypted at rest.
+- **Dependency Scanning:** Automated via `npm audit` on every PR.
+
+## 15. Deployment Strategy
+- **Environments:** `dev`, `staging`, `production`.
+- **Methodology:** Continuous Delivery. Merges to `main` auto-deploy to `staging`. Production requires manual gating.
+- **Infrastructure:** Containerized deployments via Docker to Kubernetes (EKS/AKS).
+
+## 16. Monitoring & Observability
+- **Metrics:** Prometheus endpoint exposing active matches, WebSocket connections, and latency.
+- **Logging:** Structured JSON logging (e.g., Pino) shipped to the enterprise centralized logging cluster.
+- **Tracing:** OpenTelemetry instrumentation for cross-service tracing.
+
+## 17. Documentation Standards
+- **Code:** Self-documenting domain models; explicit JSDoc for public Application Service contracts.
+- **Repo:** `README.md` must contain 1-click local setup instructions.
+- **Decisions:** Documented chronologically in the `/docs/adr/` directory.
+
+## 18. Definition of Ready
+A feature is Ready for development when:
+1. User story and acceptance criteria are explicitly defined.
+2. Necessary API contracts are documented.
+3. Design/UX mockups are attached (if applicable).
+
+## 19. Definition of Done
+A feature is Done when:
+1. All code is written and peer-reviewed.
+2. All automated tests pass (Unit/Integration).
+3. Code is merged to `main` and successfully deployed to `staging`.
+4. Any relevant ADRs or architectural diagrams have been updated.
+
+## 20. ADR Index
+- `ADR-001`: Adopt SK-101 TypeScript Starter Kit.
+- *(Future ADRs to be recorded here)*
+
+## 21. Risk Register
+- **Risk:** High latency during global company events.
+  - **Mitigation:** Rely heavily on Redis for ephemeral state, delaying DB writes.
+- **Risk:** Cheating or botting.
+  - **Mitigation:** Rate-limit socket events and validate answer timestamps strictly on the server.
+
+## 22. Version History
+- **v1.0.0:** Initial project standard ratification based on PS-001.
