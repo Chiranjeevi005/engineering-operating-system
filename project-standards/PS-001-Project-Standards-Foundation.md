@@ -1,108 +1,144 @@
-# PS-001 Project Standards Foundation
+# PS-001 — Project Standards Foundation
 
-## 1. Purpose & Identity
+## 1. Project Standard Identity
 
-This document establishes the enterprise foundation for all Project Standards within the Engineering Operating System (EOS). While Starter Kits define *how to initialize* a compliant codebase, Project Standards define *how a specific project should be engineered and operated*. PS-001 serves as the universal template and governing baseline from which all individual project standards (e.g., PS-101) MUST inherit.
+This document establishes the universal foundation for all Project Standards within the enterprise Engineering Operating System (EOS). It serves as the definitive structural template for PS-tier assets, dictating how individual engineering projects inherit, extend, and govern their execution environments.
 
-## 2. Scope
+## 2. Purpose
 
-PS-001 governs the procedural, operational, and organizational expectations for all software engineering projects within the enterprise. It applies universally to all teams, regardless of the underlying technology stack, business domain, or deployment environment.
+The purpose of this document is to define the boundaries, lifecycle, and operational constraints of Project Standards. It ensures that every project within the enterprise maintains a consistent, governed approach to its domain-specific engineering decisions without violating overarching enterprise rules.
 
-## 3. The Role of Project Standards
+## 3. Scope
 
-A Project Standard answers the question: "How does this specific team build and deliver this specific product?" It is the definitive source of truth for a project's workflow, bridging the gap between automated governance (Starter Kits) and human execution. 
+This foundational standard applies universally to every Project Standard created within the enterprise, regardless of the target domain, platform, language, or deployment strategy.
 
-A well-defined Project Standard MUST eliminate procedural ambiguity, ensuring that any engineer can join the project and immediately understand how to contribute successfully.
+## 4. Objectives
 
-## 4. Inheritance Model
+The primary objectives of this document are to:
+* Establish a standardized composition for all Project Standards.
+* Define the explicit inheritance relationship between a Project Standard and the broader EOS hierarchy.
+* Prevent the duplication or contradiction of enterprise-level mandates at the project level.
+* Provide a clear framework for defining project-specific workflows, architectures, and conventions.
 
-Project Standards exist at the penultimate layer of the EOS inheritance hierarchy:
+## 5. Intended Audience
 
-1. **Engineering Standards (ES):** Define universal enterprise rules.
-2. **Engineering Profiles (EP):** Define technology-specific rules.
-3. **Starter Kits (SK):** Provide the executable reference implementations.
-4. **Project Standards (PS):** Inherit from the Starter Kit; define project-specific execution rules.
-5. **Projects:** Inherit from the Project Standard; the terminal node delivering business value.
+This document is intended for:
+* **Enterprise Architects:** To ensure project-level standards align with the EOS.
+* **Engineering Leads & Technical Product Managers:** To understand the constraints and responsibilities when drafting a new Project Standard for a specific product.
+* **Software Engineers:** To comprehend the origin and authority of the Project Standards governing their day-to-day execution.
 
-A downstream Project Standard (e.g., PS-101 for QuizArena) MUST NOT contradict or weaken the constraints defined in its parent Starter Kit or the EOS.
+## 6. Applicability
 
-## 5. Repository Governance
+The rules defined herein MUST be universally applied whenever a new project is initiated or a legacy project is brought under EOS governance. Every project MUST possess an active, documented Project Standard inheriting from this foundation.
 
-Every enterprise project MUST establish strict repository governance.
-* **Ownership:** Every repository MUST have a clear, documented owner (e.g., a specific team or guild) responsible for its maintenance.
-* **Access Control:** Repositories MUST enforce the Principle of Least Privilege. Direct commits to the main branch MUST be disabled.
-* **Protection Rules:** The primary branch MUST require automated status checks (build, test, lint) and at least one peer review before a merge is permitted.
+## 7. Non-Goals
 
-## 6. Workflow & Branching Strategy
+To preserve a strict separation of concerns, this foundation document has explicit non-goals:
+* It MUST NOT mandate specific programming languages, tools, or runtimes.
+* It MUST NOT define business domain rules or specific application architectures.
+* It MUST NOT attempt to function as an executable Starter Kit.
 
-Projects MUST adopt a standardized branching strategy to ensure predictable collaboration.
-* **Main Branch:** The `main` branch MUST always represent the deployable, production-ready state of the software.
-* **Feature Branches:** All new development MUST occur on short-lived feature branches cut from `main`.
-* **Branch Naming:** Branches SHOULD follow a standardized naming convention (e.g., `feature/<ticket>-<description>`, `bugfix/<ticket>-<description>`).
-* **Integration:** Long-running feature branches MUST be avoided. Engineers SHOULD integrate their work into `main` frequently to minimize merge conflicts.
+## 8. Knowledge Flow
 
-## 7. Commit Conventions
+Within the EOS, knowledge flows downward from the enterprise to the project. Project Standards MUST consume enterprise mandates through their inherited Engineering Profiles and Starter Kits. The Project Standard serves as the final, localized crystallization of this knowledge, applying specific execution rules to a defined business domain.
 
-Commit history is a permanent record of engineering intent and MUST be treated as critical documentation.
-* **Conventional Commits:** Projects MUST adopt a structured commit message format (e.g., Conventional Commits) to enable automated changelog generation and semantic versioning.
-* **Atomic Commits:** Commits MUST be atomic, representing a single logical change that passes all tests independently.
-* **Descriptive Messages:** Commit messages MUST explain the *why* behind a change, not just the *what*.
+## 9. Inheritance Model
 
-## 8. Versioning & Release Process
+Project Standards exist at the terminal edge of the EOS inheritance hierarchy:
+1. **Engineering Standards (ES):** Define universal, technology-agnostic enterprise rules.
+2. **Engineering Profiles (EP):** Inherit from ES; define technology-specific mandates.
+3. **Starter Kits (SK):** Inherit from EP; provide the executable scaffolding and implementation.
+4. **Project Standards (PS):** Inherit from SK; define project-specific execution rules and architecture.
 
-Releases MUST be deterministic, traceable, and automated.
-* **Semantic Versioning:** Projects MUST use Semantic Versioning (SemVer) to communicate the impact of changes.
-* **Immutable Artifacts:** Build artifacts MUST be immutable. A compiled binary or container image tested in staging MUST be the exact artifact deployed to production.
-* **Release Tags:** Every release MUST correspond to a specific, immutable tag in the version control system.
+A Project Standard MUST inherit strictly from an approved Starter Kit.
 
-## 9. Documentation Standards
+## 10. Project Standard Lifecycle
 
-Project documentation MUST be treated as code, living alongside the source in the repository.
-* **README:** Every project MUST have a comprehensive `README.md` detailing the project's purpose, setup instructions, and execution commands.
-* **Architecture Decision Records (ADRs):** Significant architectural deviations or complex domain models MUST be documented using ADRs to capture context and intent.
-* **Runbooks:** Projects MUST maintain operational runbooks for incident response and routine maintenance.
+A Project Standard MUST maintain a defined lifecycle:
+* **Inception:** Drafted during the architectural planning phase of a new product or service.
+* **Active:** Maintained and governed alongside the active development of the project.
+* **Deprecated:** Scheduled for retirement, typically when the underlying product enters maintenance mode.
+* **Retired:** Archived upon the decommissioning of the associated product or repository.
 
-## 10. Project Architecture Decisions
+## 11. Governance
 
-While the Starter Kit defines the enterprise architecture, the Project Standard defines the domain architecture.
-* **Domain Boundaries:** The Project Standard MUST define the specific bounded contexts and modules unique to the business domain.
-* **Infrastructure Choices:** The Project Standard MUST explicitly document the chosen infrastructure components (e.g., PostgreSQL, Redis, Kafka) and how they integrate into the architecture.
+Project Standards MUST be treated as formal governance documents.
+* A Project Standard MUST be peer-reviewed and ratified by the engineering leadership team responsible for the domain.
+* Any structural deviation from the inherited Starter Kit MUST require a documented governance exception within the Project Standard.
 
-## 11. Dependency Approval Process
+## 12. Versioning Strategy
 
-External dependencies introduce operational and security risks.
-* **Justification:** Every new dependency MUST be justified. Engineers SHOULD favor utilizing existing enterprise libraries or standard language features before importing third-party code.
-* **Security Scanning:** All dependencies MUST undergo automated security scanning before integration.
-* **Lockfiles:** Dependency lockfiles (e.g., `package-lock.json`) MUST be utilized and committed to ensure reproducible builds.
+Project Standards SHOULD utilize Semantic Versioning (SemVer) aligned with major architectural shifts in the project.
+* **Major:** A fundamental change in the project's domain architecture or a migration to a new parent Starter Kit.
+* **Minor:** The introduction of new project-specific workflows, tools, or structural layers.
+* **Patch:** Clarifications, updates to documentation, or minor process refinements.
 
-## 12. Review Checklist
+## 13. Extension Rules
 
-Peer review is the primary mechanism for maintaining quality and sharing knowledge. Reviews MUST verify:
-* Architectural alignment with the Project Standard.
-* Adherence to naming and stylistic conventions.
-* The presence of adequate test coverage for new or modified logic.
-* The absence of hardcoded secrets or insecure patterns.
-* The clarity and accuracy of accompanying documentation.
+Project Standards are designed to extend the EOS into the specific business domain.
+* A Project Standard MUST NOT redefine rules already established by its parent Starter Kit or Engineering Profile.
+* A Project Standard MAY introduce stricter constraints than those inherited (e.g., requiring 100% test coverage when the enterprise mandates 80%).
+* A Project Standard MUST NOT weaken or disable inherited governance (e.g., disabling static analysis rules injected by the Starter Kit).
 
-## 13. Definition of Done
+## 14. Relationship with Engineering Standards
 
-A feature or task is only "Done" when it meets the following criteria:
-* The code is written, peer-reviewed, and merged into the main branch.
-* All automated tests pass, and coverage thresholds are met.
-* The feature is fully integrated into the CI/CD pipeline.
-* Documentation (including ADRs and API contracts) has been updated.
-* The feature has been successfully deployed to a staging or pre-production environment.
+Engineering Standards define universal truths (e.g., "All secrets MUST be encrypted in transit"). The Project Standard MUST assume these truths are enforced by the underlying platforms and MUST NOT attempt to redefine or circumvent them.
 
-## 14. Definition of Ready
+## 15. Relationship with Engineering Profiles
 
-A task or feature request is only "Ready" to be worked on when:
-* The business value and acceptance criteria are clearly defined.
-* The technical constraints and dependencies are identified.
-* The necessary architectural design has been completed or discussed.
-* The work is sized appropriately to fit within a single iteration or sprint.
+Engineering Profiles define the abstract rules for a specific technology. Project Standards MUST NOT reference Engineering Profiles directly; they MUST consume these rules via the physical manifestation provided by the Starter Kit.
 
-## 15. Extensibility & Exceptions
+## 16. Relationship with Starter Kits
 
-Project Standards are living documents that MUST evolve with the project.
-* **Project Specifics:** A specific project (like QuizArena) MUST create its own Project Standard (e.g., PS-101) that inherits this foundation and fills in the specific details (e.g., "We use PostgreSQL 16" or "We use GitHub Actions").
-* **Exceptions:** Any deviation from the Project Standard MUST require an Architecture Decision Record (ADR) detailing the justification, risks, and expected duration of the exception.
+Starter Kits provide the executable baseline. The Project Standard MUST document the exact version of the Starter Kit used during initialization and MUST define the project's strategy for consuming future updates from that Starter Kit.
+
+## 17. Relationship with Engineering Projects
+
+The Project Standard is the definitive rulebook for a specific engineering project (e.g., "QuizArena"). The engineering project repository is the physical execution of the Project Standard. A project MUST NOT contain architectural paradigms, tools, or workflows that contradict its governing Project Standard.
+
+## 18. Project Standard Principles
+
+All Project Standards MUST adhere to the following principles:
+* **Clarity Over Cleverness:** Rules and workflows MUST be explicitly defined, leaving no room for procedural ambiguity.
+* **Traceability:** Every major architectural or tooling decision unique to the project MUST be documented as an Architecture Decision Record (ADR).
+* **Automation First:** Project Standards SHOULD mandate automated enforcement of rules (e.g., CI/CD gates) over manual developer discipline.
+
+## 19. Compliance Requirements
+
+To remain compliant within the EOS, a Project Standard MUST:
+* Explicitly declare its inheritance from a ratified Starter Kit.
+* Contain all required sections defined in the Project Standard Composition baseline.
+* Be stored in a discoverable, version-controlled repository alongside or near the product codebase.
+
+## 20. Maintenance Responsibilities
+
+The Technical Lead or Engineering Manager of the specific project MUST own the maintenance of the Project Standard. It is their responsibility to ensure the document remains an accurate reflection of the project's architecture and operational reality.
+
+## 21. Traceability
+
+Project Standards MUST maintain verifiable traceability. The document MUST include metadata detailing the specific project name, the parent Starter Kit, and the date of last ratification.
+
+## 22. Project Standard Deliverables
+
+A complete Project Standard MUST deliver:
+* The core governance document (e.g., `PS-101.md`).
+* Project-specific Architecture Decision Records (ADRs).
+* A documented Definition of Done (DoD) and Definition of Ready (DoR).
+* A clear operational workflow (Branching, PR rules, Release strategy).
+
+## 23. Project Standard Composition
+
+Every future Project Standard MUST contain the following baseline structural sections:
+* **Project Identity:** Name and scope of the product.
+* **Inheritance:** Explicit declaration of the parent Starter Kit.
+* **Architecture & Tech Stack:** Project-specific domain architectures and chosen infrastructural technologies.
+* **Repository & Workflow:** Branching strategy, commit conventions, and peer review rules.
+* **Definition of Ready & Done:** The project-specific quality gates required for execution.
+
+## 24. Project Standard Anti-Patterns
+
+The following practices destroy the value of Project Standards and MUST NOT be permitted:
+* **The "Copy-Paste" Standard:** Duplicating the contents of the Starter Kit documentation into the Project Standard instead of relying on inheritance.
+* **The Phantom Standard:** Creating a Project Standard that does not reflect the actual workflows and architecture used by the engineering team.
+* **The Governance Bypass:** Using the Project Standard as a loophole to explicitly disable enterprise security or quality gates.
+* **The Theoretical Standard:** Defining rules and workflows that are entirely manual and lack CI/CD or tooling enforcement.
