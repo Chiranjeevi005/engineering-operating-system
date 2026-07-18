@@ -1,13 +1,13 @@
 ---
 repository_family: Engineering Profiles (EP)
-identifier: EP-[XXX]
+identifier: EP-101
 version: 1.0
 status: Draft
 owner: EOS Architecture Board
 audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
-# EP-[XXX] [Technology Name] Core Profile
+# EP-101 TypeScript Core Profile
 
 > This Engineering Profile defines the enterprise implementation of an approved technology.
 > It strengthens engineering consistency and maintainability.
@@ -128,3 +128,4 @@ Before approval, this profile must pass:
 > It enables reusable engineering knowledge while preserving technology independence at the governance layer.
 > AI may assist in implementation and validation, but human engineers remain accountable for every engineering decision and every deployed asset.
 > Engineering Profiles exist to strengthen sustainable engineering capability over the lifetime of the enterprise.
+

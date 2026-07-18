@@ -14,7 +14,18 @@ The Engineering Profile Catalog & Taxonomy establishes the organizational archit
 
 ## Profile Taxonomy
 
-The Engineering Profile ecosystem is divided into official profile families based on architectural capabilities. The taxonomy is extensible, and new profile families may be introduced through formal governance approval.
+The Engineering Profile ecosystem is divided into official profile families based on architectural capabilities.
+
+### Artifact Structure
+To ensure scalability and separation of concerns, every Engineering Profile is structured as a dedicated directory containing specific artifact types:
+
+```
+EP-[XXX]-[TechnologyName]/
+  ├── Core-Profile.md             (mandatory - governs technology constraints)
+  ├── Reference-Architecture.md   (optional - architectural patterns)
+  ├── Reference-Implementation.md (optional - boilerplate code)
+  └── Migration-Guide.md          (optional - upgrade paths)
+```
 
 The official profile families include:
 

@@ -1,4 +1,18 @@
+---
+repository_family: Engineering Profiles (EP)
+identifier: EP-001
+version: 1.0
+status: Approved
+owner: EOS Architecture Board
+audience: Engineers, Architects, Contributors, AI Assistants
+---
+
 # EP-001 Engineering Profiles Foundation
+
+> Engineering Standards guide engineering work.
+> They strengthen engineering quality through consistent practices.
+> They do not replace professional judgment.
+> Engineers remain accountable for every engineering decision.
 
 ## 1. Engineering Operating System Architecture
 
@@ -13,6 +27,24 @@ The hierarchy consists of the following layers:
 5. **Engineering Assets:** The deployed code, schemas, infrastructure, models, and documentation produced by the project.
 
 This document establishes the constitutional foundation for the **Engineering Profiles (EP)** layer.
+
+**EP-001 SHALL be the single constitutional authority governing all Engineering Profiles. No individual Engineering Profile may redefine governance, lifecycle, ownership, compliance, review, inheritance, or constitutional philosophy already defined in EP-001.**
+
+---
+
+## 2. Repository Architecture & Folder Convention
+
+Engineering Profiles are organized as capability folders. Each profile owns a self-contained directory containing the four artifact types:
+
+```
+EP-[XXX]-[TechnologyName]/
+  ├── Core-Profile.md             (mandatory)
+  ├── Reference-Architecture.md   (optional)
+  ├── Reference-Implementation.md (optional)
+  └── Migration-Guide.md          (optional)
+```
+
+Additional supporting artifacts may be added without changing the profile identifier.
 
 ---
 
@@ -234,3 +266,8 @@ Engineering Profiles are the building blocks of Project Standards.
 * **Immutability:** Projects must never modify an Engineering Profile directly. Profiles represent the enterprise consensus on a technology.
 * **Consumption:** A project creates its Project Standard by selecting the necessary Engineering Profiles (e.g., "This project inherits the Go Coding Profile, the PostgreSQL Profile, and the REST API Profile").
 * **Extension:** Project Standards add the final layer of context—business logic, project-specific naming conventions, and domain boundaries—building atop the implementation foundation provided by the Engineering Profiles.
+
+> This Engineering Standard exists to improve engineering capability, consistency, and long-term maintainability.
+> It guides engineering decisions through universal principles rather than technology-specific preferences.
+> **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+> Engineering exists to create sustainable business value while strengthening human capability.
