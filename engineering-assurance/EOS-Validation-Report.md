@@ -5,10 +5,10 @@ An end-to-end engineering simulation was conducted to validate the first five En
 
 The simulation successfully traversed the entire asset pipeline. The boundaries between business intent, technical design, execution strategy, and production readiness proved to be robust and highly traceable. A few minor friction points were discovered regarding load profile assumptions and decision documentation overlap. With minor refinements, the EOS Engineering Asset Library is validated and ready for production use.
 
-## 2. Capability Selected: Daily Quiz Challenge
-To exercise the full pipeline, we selected a highly realistic capability from QuizArena: **The Daily Quiz Challenge**.
-- **Nature of the Capability:** A unique set of 5 questions released to all users simultaneously every 24 hours at midnight UTC.
-- **Complexity:** Involves strict business rules (one attempt per day), high concurrency spikes (midnight push notifications), and caching requirements.
+## 2. Capability Selected: Daily Global Event
+To exercise the full pipeline, we selected a highly realistic capability from an Example Project: **The Daily Global Event**.
+- **Nature of the Capability:** A unique set of data payloads released to all users simultaneously every 24 hours at midnight UTC.
+- **Complexity:** Involves strict business rules (one action per day), high concurrency spikes (midnight push notifications), and caching requirements.
 - **Why Selected:** It perfectly stresses business boundaries, architectural scalability, delivery phasing, and production observability.
 
 ---
@@ -16,18 +16,18 @@ To exercise the full pipeline, we selected a highly realistic capability from Qu
 ## 3. End-to-End Engineering Walkthrough (EA-001 → EA-005)
 
 ### Step 1: EA-001 (Capability Blueprint)
-- **Action:** Simulated the definition of the Daily Quiz Challenge (CAP-001).
+- **Action:** Simulated the definition of the Daily Global Event (CAP-001).
 - **Observation:** The "Business Context" and "Functional Requirements" sections easily captured the "What" and "Why" (e.g., driving daily active users, one attempt per day). 
 - **Friction Point:** The blueprint lacked a natural place to define expected user volume. The fact that all users receive a push notification at exactly midnight UTC is a critical business reality that dramatically impacts downstream architecture, but it wasn't captured naturally under "Functional Requirements" or "Constraints."
 
 ### Step 2: EA-002 (Capability Design Specification)
 - **Action:** Simulated creating CDS-001 tracing back to CAP-001.
-- **Observation:** The "Architecture View" and "Information & State View" forced a clear separation between the static nature of the daily quiz and the dynamic nature of user attempts. 
+- **Observation:** The "Architecture View" and "Information & State View" forced a clear separation between the static nature of the daily payload and the dynamic nature of user attempts. 
 - **Friction Point:** Because EA-001 missed the concurrency spike, the architect had to infer the "Quality Attributes" (performance targets). Furthermore, realizing the spike required edge caching, an architectural decision was triggered. 
 
 ### Step 3: EA-004 (Architecture Decision Record)
 - **Action:** Simulated creating ADR-001 to resolve the scalability challenge.
-- **Decision:** Implement a CDN Edge Cache for the `/daily-quiz` payload, bypassing the application servers entirely for the static daily payload.
+- **Decision:** Implement a CDN Edge Cache for the `/daily-event` payload, bypassing the application servers entirely for the static daily payload.
 - **Observation:** The ADR was introduced naturally. It answered the "Why CDN?" question beautifully without polluting EA-002 with infrastructure debate.
 - **Friction Point:** EA-002 has a section for "Alternatives Considered" and ADR-001 also has "Alternatives Considered." If we link the ADR, filling out the EA-002 alternatives section feels duplicative for this specific decision.
 
@@ -37,7 +37,7 @@ To exercise the full pipeline, we selected a highly realistic capability from Qu
 - **Success:** No architectural modifications were needed in EA-002 to plan the delivery. The separation of "Design" and "Delivery Strategy" proved highly effective.
 
 ### Step 5: EA-005 (Production Readiness Review)
-- **Action:** Simulated the PRR for the Daily Quiz release.
+- **Action:** Simulated the PRR for the Daily Global Event release.
 - **Observation:** Translating the Verification View of EA-003 into the Evidence View of EA-005 (e.g., Load test results at E2 level) was completely objective. 
 - **Success:** The PRR was entirely evidence-based. No business justification or architectural debates resurfaced at the Go/No-Go gate.
 
