@@ -3,7 +3,7 @@ repository_family: Engineering Standards (ES)
 identifier: ES-002
 version: 1.0
 status: Approved
-owner: EOS Architecture Board
+owner: EOS EOS Architecture Board
 audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
@@ -47,34 +47,25 @@ The Engineering Operating System (EOS) requires universal Coding Standards to en
 - All downstream language-specific profiles (e.g., ES-002-TS, ES-002-GO) inherit the universal requirements defined here, translating them into specific language syntax, linter rules, and framework conventions.
 
 ## Traceability
-*Guidance: Illustrate the EOS architecture from research down to implementation.*
 
-RS-001
-↓
-RS-002
-↓
-RS-003
-↓
-RS-004
-↓
-ES-001
-↓
-ES-002
-↓
-Language Profiles
-↓
-Project Standards
-↓
-Engineering Assets
-
+Traceability follows the canonical EOS Engineering Traceability Model defined in ES-001.
 
 ## Capability Boundaries
 
-This standard governs:
-- [To be defined]
+**Governed:**
+- [Universal concepts this standard owns]
 
-This standard does NOT govern:
-- [To be defined]
+**Not Governed:**
+- [Concepts explicitly out of scope]
+
+**Delegated:**
+- [Implementation rules deferred to Technology Profiles]
+
+**Inherited:**
+- [Philosophy inherited from RS]
+
+**Dependencies:**
+- [Explicit links to other ES documents]
 
 ## Engineering Governance
 
@@ -87,8 +78,7 @@ This standard does NOT govern:
 - **Decision Retirement:** [To be defined]
 
 ### Engineering Trade-off Governance
-When architectural goals conflict, this standard balances the Canonical Quality Attributes:
-(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+When architectural goals conflict, this standard balances the Canonical Quality Attributes defined in ES-001.
 
 [Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
 
@@ -117,208 +107,10 @@ When architectural goals conflict, this standard balances the Canonical Quality 
 
 ---
 
-## BLOCK L: Governance & Compliance
+## Domain Governance & Compliance
 
-### 67. Rule Identifier Convention
-*Guidance: Define a canonical identifier format for all requirements within this standard family.*
-
-- **Format:** [e.g., ES002-R-001]
-- **Prefix:** [e.g., ES002-R]
-
-### 68. Requirement Model
-*Guidance: Define the schema used to document formal rules in downstream Language Profiles, inheriting from ES-001 and enriched with quality attributes.*
-
-Every downstream coding requirement SHALL utilize the following schema:
-- **Requirement ID:** [Unique canonical ID, e.g., ES002-R-001]
-- **Category:** [Organization / Design / Naming / Documentation / Security / Testing / Performance / Reliability / Maintainability]
-- **Requirement Statement:** [Normative statement using RFC 2119]
-- **Rationale:** [Why the rule exists]
-- **Priority:** [Critical / High / Medium / Low]
-- **Compliance Level:** [Mandatory / Conditional / Recommended / Informational]
-- **Risk Classification:** [Security / Reliability / Maintainability / Operational / Compliance]
-- **Enforcement Type:** [Automated / Semi-Automated / Manual]
-- **Implementation Status:** [Planned / Pilot / Adopted / Mandatory / Legacy]
-- **Requirement Owner:** [Role or Team accountable for this specific rule]
-- **Verification Method:** [How it is checked]
-- **Quality Attributes:** [Which attributes this requirement primarily supports]
-- **Exceptions:** [Allowed deviations]
-- **Dependencies:** [Other Requirement IDs this rule relies on]
-- **Cross-References:** [Links to Architecture, Security, or API Standards]
-- **Traceability:** [Link to upstream requirement or principle]
-
-### 69. Requirement Lifecycle
-*Guidance: Document how an individual requirement evolves independently from the document version.*
-
-- **Proposed:** The rule has been suggested but not vetted.
-- **Draft:** The rule is being formally written and reviewed.
-- **Approved:** The rule has passed review but is not yet enforced.
-- **Active:** The rule is actively enforced across all teams.
-- **Deprecated:** The rule is being phased out in favor of a newer standard.
-- **Retired:** The rule is no longer enforced or applicable.
-
-### 70. Rule Conflict Resolution
-*Guidance: Define precedence when standards appear to conflict.*
-
-1. ES-001 Governance Framework
-2. Security Standards
-3. Architecture Standards
-4. Coding Standards (ES-002)
-5. Project Standards
-6. Language Profiles
-
-### 71. Compliance Verification
-*Guidance: Define the standard methods for verifying code compliance.*
-
-- **Static Analysis:** [Linter and SAST expectations]
-- **Linters:** [Automated style and syntax checks]
-- **Security Scanners:** [Automated vulnerability detection]
-- **Code Coverage Reports:** [Automated test coverage verification]
-- **Complexity Analysis:** [Automated cyclomatic complexity and maintainability index checks]
-- **Automated Testing:** [CI/CD test execution expectations]
-- **Peer Review:** [Code review expectations]
-- **Manual Review:** [Human auditing of code logic]
-- **Architecture Conformance Checks:** [Automated or manual reviews of architectural constraints]
-
-### 72. Standards Relationship Matrix
-*Guidance: Document how ES-002 interacts with and depends on other organizational standards.*
-
-| Standard | Relationship | Notes |
-| :--- | :--- | :--- |
-| ES-003 Architecture Standards | Extends | ES-002 applies architecture patterns to code structure. |
-| ES-004 API Standards | Influences | Coding standards affect how APIs are implemented. |
-| ES-006 Security Standards | Constrains | Security dictates certain coding requirements. |
-| ES-007 Testing Standards | Complements | ES-002 requires testing which ES-007 defines. |
-
-### 73. Exception Management
-*Guidance: Reference the ES-001 exception process.*
-
-- **Process:** Deviations from Mandatory coding standards must follow the Exception Management process defined in ES-001.
-
-### 74. Migration Guidance
-*Guidance: Define how major updates to this standard are handled organizationally.*
-
-Whenever major changes are introduced to ES-002 or its downstream language profiles, the update MUST include:
-- **Migration Impact:** [Assessment of how much legacy code violates the new rule]
-- **Backward Compatibility:** [Whether the new rule breaks existing workflows]
-- **Transition Period:** [How long teams have to adopt the new rule]
-- **Deprecation Timeline:** [When the old rule will trigger a hard failure in CI/CD]
-
-### 75. Review Process
-*Guidance: Document the code review requirements.*
-
-- **Code Review Requirements:** [Rules governing mandatory peer review before merging code]
-
-### 76. Standards Governance
-*Guidance: Document how this specific standard is maintained.*
-
-- **Maintenance:** Managed by the core architecture or engineering productivity team.
-- **Updates:** Governed by the change classification model defined in ES-001.
-
-### 77. Compliance Dashboard
-*Guidance: Define the metrics reported to engineering leadership to monitor standard adoption.*
-
-| Metric | Target | Current Value |
-| :--- | :--- | :--- |
-| Compliance Rate | [Target %] | [Value] |
-| Review Coverage | [Target %] | [Value] |
-| Static Analysis Pass Rate | [Target %] | [Value] |
-| Test Coverage | [Target %] | [Value] |
-| Technical Debt Items | [Target Count] | [Value] |
-| Open Exceptions | [Target Count] | [Value] |
-| Security Findings | [Target Count] | [Value] |
-
----
-
-## APPENDIX
-
-### Definitions
-*Guidance: Define context-specific coding terms used in this document.*
-
-- **[Term]:** [Definition]
-
-### Glossary
-*Guidance: Define any acronyms used in this document.*
-
-- **[Acronym]:** [Definition]
-
-### Coding Domains
-*Guidance: List the standardized domains of software engineering covered by these standards.*
-
-- **[Domain]:** [Description]
-
-### Requirement Categories
-*Guidance: Standardized categories for grouping coding requirements.*
-
-- [Organization, Design, Naming, Documentation, Security, Testing, Performance, Reliability, Maintainability]
-
-### Rule Priority
-*Guidance: Standardized priority levels for requirements.*
-
-- **Critical:** Non-negotiable
-- **High:** Strongly enforced
-- **Medium:** Expected
-- **Low:** Advisory
-
-### Quality Attributes
-*Guidance: Core architectural characteristics supported by these requirements.*
-
-- [Readability, Maintainability, Reliability, Security, Performance, Testability, Scalability, Portability, Observability]
-
-### Enforcement Types
-*Guidance: Levels of automation available for a given rule.*
-
-- [Automated, Semi-Automated, Manual]
-
-### Risk Classifications
-*Guidance: Core engineering risks mitigated by a given rule.*
-
-- [Security, Reliability, Maintainability, Operational, Compliance]
-
-### Implementation Statuses
-*Guidance: Adoption phases for rules across the organization.*
-
-- [Planned, Pilot, Adopted, Mandatory, Legacy]
-
-### Requirement Classification
-*Guidance: Reference ES-001 normative keywords.*
-
-- [MUST, MUST NOT, SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY]
-
-### Compliance Levels
-*Guidance: Reference ES-001 compliance levels.*
-
-- [Mandatory, Conditional, Recommended, Informational]
-
-### Verification Methods
-*Guidance: Formal methods for verifying compliance.*
-
-- [Static analysis, Linters, Security scanners, Code coverage reports, Complexity analysis, Manual review, Architecture conformance checks]
-
-### Governance Roles
-*Guidance: Reference ES-001 governance roles, expanded for rule-level tracking.*
-
-- [Owner, Maintainer, Reviewer, Approver, Requirement Owner, Domain Owner, Technical Steward]
-
-### Reference Sources
-*Guidance: Provide links back to ES-001, RS-004, and any external coding philosophy references.*
-
-- [Reference title and link]
-
-### Version History
-*Guidance: Track major revisions to this coding standard.*
-
-| Version | Date | Author | Description of Change |
-| :--- | :--- | :--- | :--- |
-| [1.2.0] | [YYYY-MM-DD] | [Name] | [v1.2 Refinements (QA Block, Rule Lifecycle, Advanced Governance)] |
-
-## Technology Profiles
-
-This section defines how the Universal Requirements are translated into technology-specific constraints.
-Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
-
-## Project Standards
-
-This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+Universal engineering governance, compliance, review, and exception policies are strictly inherited from ES-001. 
+This section is reserved exclusively for domain-specific governance requirements (e.g., security-specific exception criteria).
 
 ## Design for Evolution
 
@@ -335,6 +127,7 @@ This section defines how this standard will safely evolve over the next decade.
 > It guides engineering decisions through universal principles rather than technology-specific preferences.
 > **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 > Engineering exists to create sustainable business value while strengthening human capability.
+
 
 
 

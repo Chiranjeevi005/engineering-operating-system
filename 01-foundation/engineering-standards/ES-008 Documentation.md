@@ -3,7 +3,7 @@ repository_family: Engineering Standards (ES)
 identifier: ES-008
 version: 1.0
 status: Approved
-owner: EOS Architecture Board
+owner: EOS EOS Architecture Board
 audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
@@ -80,48 +80,24 @@ The Engineering Operating System (EOS) requires universal Documentation Standard
 
 ## Traceability
 
-*Guidance: Illustrate the hierarchical position of ES-008 within the EOS architecture to ensure complete traceability from root strategies to engineered assets.*
-
-```text
-RS-001
-  ↓
-RS-002
-  ↓
-RS-003
-  ↓
-RS-004
-  ↓
-ES-001
-  ↓
-ES-002
-  ↓
-ES-003
-  ↓
-ES-004
-  ↓
-ES-005
-  ↓
-ES-006
-  ↓
-ES-007
-  ↓
-ES-008
-  ↓
-Documentation Profiles
-  ↓
-Project Documentation Standards
-  ↓
-Engineering Assets
-```
-
+Traceability follows the canonical EOS Engineering Traceability Model defined in ES-001.
 
 ## Capability Boundaries
 
-This standard governs:
-- [To be defined]
+**Governed:**
+- [Universal concepts this standard owns]
 
-This standard does NOT govern:
-- [To be defined]
+**Not Governed:**
+- [Concepts explicitly out of scope]
+
+**Delegated:**
+- [Implementation rules deferred to Technology Profiles]
+
+**Inherited:**
+- [Philosophy inherited from RS]
+
+**Dependencies:**
+- [Explicit links to other ES documents]
 
 ## Engineering Governance
 
@@ -134,8 +110,7 @@ This standard does NOT govern:
 - **Decision Retirement:** [To be defined]
 
 ### Engineering Trade-off Governance
-When architectural goals conflict, this standard balances the Canonical Quality Attributes:
-(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+When architectural goals conflict, this standard balances the Canonical Quality Attributes defined in ES-001.
 
 [Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
 
@@ -516,177 +491,10 @@ When architectural goals conflict, this standard balances the Canonical Quality 
 
 ---
 
-## BLOCK M: Governance & Compliance
+## Domain Governance & Compliance
 
-*Guidance: Define the framework for enforcing, measuring, and reporting on compliance with these standards.*
-
-### 1. Requirement Model
-*Guidance: Define the structure for all specific documentation requirements within the standard.*
-
-* **Requirement ID:** [e.g., REQ-DOC-001]
-* **Category:** [e.g., Traceability]
-* **Requirement Statement:** [The normative text defining the obligation]
-* **Rationale:** [Why the requirement exists]
-* **Priority:** [Critical, High, Medium, Low]
-* **Compliance Level:** [Mandatory, Recommended, Optional]
-* **Verification Method:** [How compliance is proven]
-* **Documentation Quality Attributes:** [Accuracy, Discoverability, Completeness]
-* **Risks Addressed:** [What happens if this fails]
-* **Exceptions:** [Under what conditions this can be bypassed]
-* **Traceability:** [Upstream/Downstream links]
-
-### 2. Compliance Verification
-*Guidance: Document how the organization proves adherence to ES-008.*
-* **Documentation Review:** [Methodology for evaluating document content]
-* **Documentation Audit:** [Methodology for verifying repository compliance]
-* **Traceability Review:** [Methodology for auditing links between code and docs]
-* **Metadata Review:** [Methodology for verifying front matter compliance]
-* **Version Review:** [Methodology for verifying version alignment]
-* **Completeness Review:** [Methodology for verifying required sections are present]
-* **Knowledge Review:** [Methodology for evaluating enterprise discoverability]
-* **Operational Readiness Review:** [Methodology for verifying runbooks prior to launch]
-
-### 3. Standards Relationship Matrix
-*Guidance: Document how ES-008 intersects with other EOS standards.*
-* **ES-002 Coding Standards:** [Governs inline code comments and logic documentation]
-* **ES-003 Architecture Standards:** [Governs architectural diagrams and design documents]
-* **ES-004 API Standards:** [Governs endpoint, contract, and payload documentation]
-* **ES-005 Database Standards:** [Governs schema, data dictionary, and migration documentation]
-* **ES-006 Security Standards:** [Governs threat models, policies, and boundary documentation]
-* **ES-007 Testing Standards:** [Governs test plans, strategies, and evidence documentation]
-* **ES-009 AI Engineering Standards:** [Governs prompt documentation and model card generation]
-
-### 4. Exception Management
-*Guidance: Define the process for requesting, approving, and tracking deviations from this standard.*
-* [Define risk acceptance authority levels for releasing software with incomplete documentation]
-
-### 5. Migration Guidance
-*Guidance: Define how legacy systems must adapt to these documentation standards over time.*
-* [Define timelines for migrating legacy wikis to standard repositories]
-
-### 6. Review Process
-*Guidance: Define how often and by whom this document is reviewed.*
-* [Define annual review cadence]
-
-### 7. Standards Governance
-*Guidance: Define who owns the lifecycle of ES-008 itself.*
-* [Define the role of the Knowledge Governance Board]
-
-### 8. Compliance Dashboard
-*Guidance: Define requirements for visualizing organizational documentation compliance.*
-* [Define reporting metrics for executive visibility]
-
----
-
-## BLOCK N: Documentation Profiles
-
-*Guidance: Explain how downstream Documentation Profiles inherit ES-008 and translate it into technology-specific guidance.*
-
-Documentation Profiles inherit the governance, objectives, and universal requirements defined by ES-008 while introducing necessary technology-specific implementation guidance. They act as the bridge between universal knowledge principles and deployed documentation tools.
-
-Examples of governed profiles include:
-* **Architecture Documentation Profile:** [Defines specific diagramming languages and architecture tools]
-* **API Documentation Profile:** [Defines specific interface description formats and generation tooling]
-* **Database Documentation Profile:** [Defines specific schema visualization and data cataloging tools]
-* **Security Documentation Profile:** [Defines specific threat modeling tools and vulnerability reporting formats]
-* **Testing Documentation Profile:** [Defines specific test management and reporting platforms]
-* **Operational Documentation Profile:** [Defines specific runbook platforms and incident management tools]
-* **Architecture Decision Record (ADR) Profile:** [Defines specific ADR formats and repository structures]
-* **Runbook Documentation Profile:** [Defines specific executable runbook environments]
-* **Knowledge Base Profile:** [Defines specific centralized wiki or portal implementations]
-* **AI Documentation Profile:** [Defines specific model card and dataset documentation formats]
-
-These profiles must never weaken the mandates of ES-008 and must undergo the same governance and review lifecycle.
-
----
-
-## BLOCK O: Enterprise Documentation Governance
-
-*Guidance: Document organization-wide governance policies that span beyond individual documentation efforts.*
-
-### Documentation Ownership
-*Guidance: Define organizational accountability structures for overall knowledge preservation.*
-* [Define executive liability and responsibility for engineering memory]
-
-### Knowledge Governance
-*Guidance: Define the framework for managing information as a strategic enterprise asset.*
-* [Define the enterprise strategy for preventing knowledge loss and silos]
-
-### Documentation Policy
-*Guidance: Define how high-level knowledge policies are created and distributed.*
-* [Define the enterprise policy lifecycle for documentation]
-
-### Documentation Maturity
-*Guidance: Define the framework for assessing the engineering culture's documentation practices.*
-* [Define maturity tiers (e.g., ad-hoc docs vs. docs-as-code) and promotion criteria]
-
-### Engineering Memory
-*Guidance: Define requirements for long-term retention of technical decisions.*
-* [Define the mandate for maintaining organizational history independent of employee tenure]
-
-### Auditability
-*Guidance: Define requirements for interacting with internal and external auditors.*
-* [Define evidence collection and retention mandates for architectural decisions]
-
-### Enterprise Documentation Metrics
-*Guidance: Define the high-level indicators of enterprise knowledge health.*
-* [Define board-level reporting metrics on knowledge discoverability and freshness]
-
-### Continuous Knowledge Improvement
-*Guidance: Define requirements for educating engineering personnel on technical writing.*
-* [Define mandatory technical writing and knowledge management curriculums]
-
----
-
-## Appendix
-
-### Definitions
-* [Provide strict definitions for terms used in this document]
-
-### Glossary
-* [Provide expansions for acronyms used in this document]
-
-### Documentation Domains
-* [List the logical groupings of documentation capabilities]
-
-### Documentation Classifications
-* [Define exact classification labels for document types]
-
-### Requirement Categories
-* [List the categories used in the Requirement Model]
-
-### Rule Priority
-* [Define the definitions of Critical, High, Medium, Low]
-
-### Documentation Quality Attributes
-* [Define Accuracy, Discoverability, Completeness, etc.]
-
-### Requirement Classification
-* [Define Mandatory vs. Recommended vs. Optional]
-
-### Compliance Levels
-* [Define what constitutes full vs. partial compliance]
-
-### Verification Methods
-* [Define the accepted mechanisms for proving compliance]
-
-### Governance Roles
-* [Define the responsibilities of the Owner, Reviewer, and Approver]
-
-### Reference Sources
-* [List external foundational texts or internal policies that informed this document]
-
-### Version History
-* [v1.0.0 - YYYY-MM-DD - Initial Publication - Author Name]
-
-## Technology Profiles
-
-This section defines how the Universal Requirements are translated into technology-specific constraints.
-Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
-
-## Project Standards
-
-This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+Universal engineering governance, compliance, review, and exception policies are strictly inherited from ES-001. 
+This section is reserved exclusively for domain-specific governance requirements (e.g., security-specific exception criteria).
 
 ## Design for Evolution
 
@@ -703,6 +511,7 @@ This section defines how this standard will safely evolve over the next decade.
 > It guides engineering decisions through universal principles rather than technology-specific preferences.
 > **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 > Engineering exists to create sustainable business value while strengthening human capability.
+
 
 
 

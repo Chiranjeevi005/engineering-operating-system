@@ -3,7 +3,7 @@ repository_family: Engineering Standards (ES)
 identifier: ES-006
 version: 1.0
 status: Approved
-owner: EOS Architecture Board
+owner: EOS EOS Architecture Board
 audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
@@ -74,44 +74,24 @@ The Engineering Operating System (EOS) requires universal Security Standards to 
 
 ## Traceability
 
-*Guidance: Illustrate the hierarchical position of ES-006 within the EOS architecture to ensure complete traceability from root strategies to engineered assets.*
-
-```text
-RS-001
-  ↓
-RS-002
-  ↓
-RS-003
-  ↓
-RS-004
-  ↓
-ES-001
-  ↓
-ES-002
-  ↓
-ES-003
-  ↓
-ES-004
-  ↓
-ES-005
-  ↓
-ES-006
-  ↓
-Security Profiles
-  ↓
-Project Security Standards
-  ↓
-Engineering Assets
-```
-
+Traceability follows the canonical EOS Engineering Traceability Model defined in ES-001.
 
 ## Capability Boundaries
 
-This standard governs:
-- [To be defined]
+**Governed:**
+- [Universal concepts this standard owns]
 
-This standard does NOT govern:
-- [To be defined]
+**Not Governed:**
+- [Concepts explicitly out of scope]
+
+**Delegated:**
+- [Implementation rules deferred to Technology Profiles]
+
+**Inherited:**
+- [Philosophy inherited from RS]
+
+**Dependencies:**
+- [Explicit links to other ES documents]
 
 ## Engineering Governance
 
@@ -124,8 +104,7 @@ This standard does NOT govern:
 - **Decision Retirement:** [To be defined]
 
 ### Engineering Trade-off Governance
-When architectural goals conflict, this standard balances the Canonical Quality Attributes:
-(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+When architectural goals conflict, this standard balances the Canonical Quality Attributes defined in ES-001.
 
 [Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
 
@@ -478,175 +457,10 @@ When architectural goals conflict, this standard balances the Canonical Quality 
 
 ---
 
-## BLOCK M: Governance & Compliance
+## Domain Governance & Compliance
 
-*Guidance: Define the framework for enforcing, measuring, and reporting on compliance with these standards.*
-
-### 1. Requirement Model
-*Guidance: Define the structure for all specific security requirements within the standard.*
-
-* **Requirement ID:** [e.g., REQ-SEC-001]
-* **Category:** [e.g., Authorization]
-* **Requirement Statement:** [The normative text defining the obligation]
-* **Rationale:** [Why the requirement exists]
-* **Priority:** [Critical, High, Medium, Low]
-* **Compliance Level:** [Mandatory, Recommended, Optional]
-* **Verification Method:** [How compliance is proven]
-* **Security Quality Attributes:** [Confidentiality, Integrity, Availability]
-* **Risks Addressed:** [What happens if this fails]
-* **Exceptions:** [Under what conditions this can be bypassed]
-* **Traceability:** [Upstream/Downstream links]
-
-### 2. Compliance Verification
-*Guidance: Document how the organization proves adherence to ES-006.*
-* **Security Architecture Review:** [Methodology for evaluating system design]
-* **Threat Model Review:** [Methodology for verifying threat mitigations]
-* **Identity Review:** [Methodology for auditing identity stores]
-* **Access Review:** [Methodology for verifying authorization logic]
-* **Vulnerability Assessment:** [Methodology for discovering technical flaws]
-* **Security Testing Review:** [Methodology for evaluating security test coverage]
-* **Compliance Assessment:** [Methodology for mapping to regulatory controls]
-* **Operational Readiness Review:** [Methodology for pre-production security gating]
-
-### 3. Standards Relationship Matrix
-*Guidance: Document how ES-006 intersects with other EOS standards.*
-* **ES-002 Coding Standards:** [Governs implementation of application security controls]
-* **ES-003 Architecture Standards:** [Governs the structure where security boundaries are placed]
-* **ES-004 API Standards:** [Governs the interfaces requiring authentication/authorization]
-* **ES-005 Database Standards:** [Governs the persistence layers requiring encryption/access control]
-* **ES-007 Testing Standards:** [Governs how security controls are continuously validated]
-
-### 4. Exception Management
-*Guidance: Define the process for requesting, approving, and tracking deviations from this standard.*
-* [Define risk acceptance authority levels]
-
-### 5. Migration Guidance
-*Guidance: Define how legacy systems must adapt to these standards over time.*
-* [Define timelines for achieving compliance]
-
-### 6. Review Process
-*Guidance: Define how often and by whom this document is reviewed.*
-* [Define annual review cadence]
-
-### 7. Standards Governance
-*Guidance: Define who owns the lifecycle of ES-006 itself.*
-* [Define the role of the Security Governance Board]
-
-### 8. Compliance Dashboard
-*Guidance: Define requirements for visualizing organizational compliance posture.*
-* [Define reporting metrics for executive visibility]
-
----
-
-## BLOCK N: Security Profiles
-
-*Guidance: Explain how downstream Security Profiles inherit ES-006 and translate it into technology-specific guidance.*
-
-Security Profiles inherit the governance, objectives, and universal requirements defined by ES-006 while introducing necessary technology-specific implementation guidance. They act as the bridge between universal principles and deployed technology.
-
-Examples of governed profiles include:
-* **Identity Profile:** [Defines specific federation protocols and identity providers]
-* **Authentication Profile:** [Defines specific MFA mechanisms and token formats]
-* **Authorization Profile:** [Defines specific policy languages and enforcement engines]
-* **Cryptography Profile:** [Defines approved ciphers, key lengths, and hash algorithms]
-* **Secrets Management Profile:** [Defines specific platforms and access patterns for secrets]
-* **Network Security Profile:** [Defines specific boundary control implementations]
-* **Application Security Profile:** [Defines specific SAST/DAST tooling and framework hardening]
-* **Infrastructure Security Profile:** [Defines specific container and host hardening baselines]
-* **Cloud Security Profile:** [Defines specific cloud provider guardrails]
-* **Zero Trust Profile:** [Defines specific continuous verification architectures]
-
-These profiles must never weaken the mandates of ES-006 and must undergo the same governance and review lifecycle.
-
----
-
-## BLOCK O: Enterprise Security Governance
-
-*Guidance: Document organization-wide governance policies that span beyond individual systems.*
-
-### Security Ownership
-*Guidance: Define organizational accountability structures for security.*
-* [Define executive liability and responsibility]
-
-### Asset Classification
-*Guidance: Define the enterprise taxonomy for valuing information and systems.*
-* [Define the enterprise data classification schema]
-
-### Risk Management
-*Guidance: Define the framework for identifying, assessing, and treating security risk.*
-* [Define the enterprise risk appetite and tolerance]
-
-### Security Policy Governance
-*Guidance: Define how high-level security policies are created and distributed.*
-* [Define the policy lifecycle]
-
-### Regulatory Compliance
-*Guidance: Define how the organization maps engineering standards to external laws.*
-* [Define mapping procedures for external frameworks]
-
-### Security Auditability
-*Guidance: Define requirements for interacting with internal and external auditors.*
-* [Define evidence collection and retention mandates]
-
-### Security Awareness
-*Guidance: Define requirements for educating engineering personnel.*
-* [Define mandatory training curriculums]
-
-### Enterprise Security Metrics
-*Guidance: Define the high-level indicators of enterprise security health.*
-* [Define board-level reporting metrics]
-
----
-
-## Appendix
-
-### Definitions
-* [Provide strict definitions for terms used in this document]
-
-### Glossary
-* [Provide expansions for acronyms used in this document]
-
-### Security Domains
-* [List the logical groupings of security capabilities]
-
-### Security Classifications
-* [Define exact classification labels (e.g., Restricted, Confidential)]
-
-### Requirement Categories
-* [List the categories used in the Requirement Model]
-
-### Rule Priority
-* [Define the definitions of Critical, High, Medium, Low]
-
-### Security Quality Attributes
-* [Define Confidentiality, Integrity, Availability, etc.]
-
-### Requirement Classification
-* [Define Mandatory vs. Recommended vs. Optional]
-
-### Compliance Levels
-* [Define what constitutes full vs. partial compliance]
-
-### Verification Methods
-* [Define the accepted mechanisms for proving compliance]
-
-### Governance Roles
-* [Define the responsibilities of the Owner, Reviewer, and Approver]
-
-### Reference Sources
-* [List external foundational texts or internal policies that informed this document]
-
-### Version History
-* [v1.0.0 - YYYY-MM-DD - Initial Publication - Author Name]
-
-## Technology Profiles
-
-This section defines how the Universal Requirements are translated into technology-specific constraints.
-Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
-
-## Project Standards
-
-This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+Universal engineering governance, compliance, review, and exception policies are strictly inherited from ES-001. 
+This section is reserved exclusively for domain-specific governance requirements (e.g., security-specific exception criteria).
 
 ## Design for Evolution
 
@@ -663,6 +477,7 @@ This section defines how this standard will safely evolve over the next decade.
 > It guides engineering decisions through universal principles rather than technology-specific preferences.
 > **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 > Engineering exists to create sustainable business value while strengthening human capability.
+
 
 
 

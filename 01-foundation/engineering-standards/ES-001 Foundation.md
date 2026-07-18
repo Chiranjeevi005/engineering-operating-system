@@ -69,32 +69,41 @@ The Engineering Operating System (EOS) requires Engineering Standards to transla
 
 - All downstream Engineering Standards inherit the structural blueprint, lifecycle definitions, normative keywords, compliance enforcement models, and exception processes defined in this foundational document.
 
-## Traceability
+## Canonical Traceability Model
 
-*Guidance: Illustrate the flow of knowledge from research through governance down to implementation.*
+Traceability illustrates the flow of knowledge from research through governance down to implementation. All EOS standards adhere to this canonical model:
 
-RS-001
+Research Specifications (RS)
 ↓
-RS-002
+Engineering Standards Foundation (ES-001)
 ↓
-RS-003
+Domain Standards (ES-002 → ES-009)
 ↓
-RS-004
+Engineering Profiles (EP)
 ↓
-ES-001
-↓
-ES-002+
+Project Standards (PS)
 ↓
 Engineering Assets
-
 
 ## Capability Boundaries
 
 This standard governs:
-- [To be defined]
+- Universal engineering governance, compliance, review, and exception policies.
+- The structure and lifecycle of all Engineering Standards.
+- The Canonical Quality Attributes and Traceability Model.
 
 This standard does NOT govern:
-- [To be defined]
+- Domain-specific engineering rules (e.g., specific security or coding practices).
+- Technology-specific implementations.
+
+Delegated:
+- Domain implementation is delegated to ES-002 through ES-009.
+
+Inherited:
+- Engineering philosophy is inherited from RS-004.
+
+Dependencies:
+- None. This is the foundational governance layer.
 
 ## Engineering Governance
 
@@ -229,6 +238,57 @@ Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from th
 
 This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
 
+## Canonical Quality Attributes
+
+All Engineering Standards must balance the following 14 Canonical Quality Attributes. They are defined centrally here to ensure enterprise-wide consistency:
+1. Simplicity
+2. Maintainability
+3. Reliability
+4. Scalability
+5. Performance
+6. Security
+7. Availability
+8. Integrity
+9. Observability
+10. Recoverability
+11. Portability
+12. Testability
+13. Usability
+14. Extensibility
+
+## Universal Engineering Governance
+
+ES-001 is the single constitutional authority for universal engineering governance. All domain standards (ES-002 through ES-009) inherit the following cross-cutting policies:
+- **Requirement Model:** How rules are formulated (Must, Shall, Should).
+- **Compliance Model:** How adherence is measured.
+- **Review Process:** Governed centrally by the **EOS Architecture Board**.
+- **Exception Management:** The universal process for requesting and approving deviations.
+- **Dashboards & Reporting:** The enterprise metrics used to track standard adoption.
+
+Domain standards may define *domain-specific governance* (e.g., security exception criteria in ES-006) but may not redefine these universal lifecycles.
+
+## EOS v1.0 Freeze Criteria
+
+An Engineering Standard is considered frozen when:
+- Constitutional alignment verified
+- Single responsibility verified
+- No duplicated universal governance
+- Technology neutrality verified
+- Capability boundaries defined
+- Profile inheritance verified
+- Traceability verified
+- Human governance verified
+- AI boundaries verified
+- Design for evolution completed
+
+## Canonical Appendix Template
+
+All Engineering Standards inherit this appendix structure. Do not duplicate these sections in domain standards unless adding domain-specific terms.
+- **Definitions:** Context-specific terms.
+- **Glossary:** Acronyms.
+- **Reference Sources:** Upstream links.
+- **Version History:** Changelog.
+
 ## Design for Evolution
 
 This section defines how this standard will safely evolve over the next decade.
@@ -244,6 +304,7 @@ This section defines how this standard will safely evolve over the next decade.
 > It guides engineering decisions through universal principles rather than technology-specific preferences.
 > **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 > Engineering exists to create sustainable business value while strengthening human capability.
+
 
 
 

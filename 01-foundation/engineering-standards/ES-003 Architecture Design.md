@@ -3,7 +3,7 @@ repository_family: Engineering Standards (ES)
 identifier: ES-003
 version: 1.0
 status: Approved
-owner: EOS Architecture Board
+owner: EOS EOS Architecture Board
 audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
@@ -47,36 +47,25 @@ The Engineering Operating System (EOS) requires universal Architecture Standards
 - All downstream Architecture Profiles inherit the universal requirements defined here, translating them into pattern-specific constraints, diagrams, and deployment considerations.
 
 ## Traceability
-*Guidance: Illustrate the EOS architecture from research down to implementation.*
 
-RS-001
-↓
-RS-002
-↓
-RS-003
-↓
-RS-004
-↓
-ES-001
-↓
-ES-002
-↓
-ES-003
-↓
-Architecture Profiles
-↓
-Project Architecture Standards
-↓
-Engineering Assets
-
+Traceability follows the canonical EOS Engineering Traceability Model defined in ES-001.
 
 ## Capability Boundaries
 
-This standard governs:
-- [To be defined]
+**Governed:**
+- [Universal concepts this standard owns]
 
-This standard does NOT govern:
-- [To be defined]
+**Not Governed:**
+- [Concepts explicitly out of scope]
+
+**Delegated:**
+- [Implementation rules deferred to Technology Profiles]
+
+**Inherited:**
+- [Philosophy inherited from RS]
+
+**Dependencies:**
+- [Explicit links to other ES documents]
 
 ## Engineering Governance
 
@@ -89,8 +78,7 @@ This standard does NOT govern:
 - **Decision Retirement:** [To be defined]
 
 ### Engineering Trade-off Governance
-When architectural goals conflict, this standard balances the Canonical Quality Attributes:
-(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+When architectural goals conflict, this standard balances the Canonical Quality Attributes defined in ES-001.
 
 [Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
 
@@ -358,188 +346,10 @@ When architectural goals conflict, this standard balances the Canonical Quality 
 
 ---
 
-## BLOCK K: Governance & Compliance
+## Domain Governance & Compliance
 
-### 58. Requirement Model
-*Guidance: Define the schema used to document formal rules in downstream Architecture Profiles, inheriting from ES-001.*
-
-Every downstream architectural requirement SHALL utilize the following schema:
-- **Requirement ID:** [Unique canonical ID, e.g., ES003-R-001]
-- **Category:** [Decomposition / Integration / Data / Quality / Operational / Documentation]
-- **Requirement Statement:** [Normative statement using RFC 2119]
-- **Rationale:** [Why the rule exists]
-- **Priority:** [Critical / High / Medium / Low]
-- **Compliance Level:** [Mandatory / Conditional / Recommended / Informational]
-- **Verification Method:** [How it is checked]
-- **Quality Attributes:** [Which attributes this requirement primarily supports]
-- **Risks Addressed:** [Which architectural risks this requirement mitigates]
-- **Exceptions:** [Allowed deviations]
-- **Traceability:** [Link to upstream requirement or principle]
-
-### 59. Non-Functional Requirement Traceability
-*Guidance: Ensure every architectural requirement links directly back to business and engineering goals.*
-
-```text
-Architecture Requirement
-↓
-Quality Attribute
-↓
-Business Requirement
-↓
-Engineering Principle
-```
-
-### 60. Compliance Verification
-*Guidance: Define the standard methods for verifying architectural compliance.*
-
-- **Architecture Review:** [Formal review board assessment]
-- **ADR Review:** [Peer review of Architecture Decision Records]
-- **Threat Modeling:** [Structured security and risk analysis]
-- **Dependency Analysis:** [Automated or manual assessment of system coupling]
-- **Operational Readiness Review:** [Pre-deployment checks for observability and resilience]
-
-### 61. Standards Relationship Matrix
-*Guidance: Document how ES-003 interacts with and depends on other organizational standards.*
-
-| Standard | Relationship | Notes |
-| :--- | :--- | :--- |
-| ES-002 Coding Standards | Influences | Architecture standards dictate the structure of the codebase. |
-| ES-004 API Standards | Complements | API standards govern the integration boundaries defined here. |
-| ES-005 Database Standards | Complements | Database standards govern the data architecture defined here. |
-| ES-006 Security Standards | Constrains | Security standards dictate boundaries and integration patterns. |
-| ES-007 Testing Standards | Influences | Architecture dictates the testability of the system. |
-
-### 62. Exception Management
-*Guidance: Reference the ES-001 exception process.*
-
-- **Process:** Deviations from Mandatory architectural standards must follow the Exception Management process defined in ES-001.
-
-### 63. Migration Guidance
-*Guidance: Define how major updates to this standard are handled organizationally.*
-
-Whenever major changes are introduced to ES-003 or its downstream profiles, the update MUST include:
-- **Migration Impact:** [Assessment of architectural impact across the enterprise]
-- **Backward Compatibility:** [Impact on existing integrations and contracts]
-- **Transition Period:** [Timeline for deprecating old patterns]
-
-### 64. Review Process
-*Guidance: Document the architecture review requirements.*
-
-- **Architecture Review Requirements:** [Rules governing mandatory review before implementation begins]
-
-### 65. Standards Governance
-*Guidance: Document how this specific standard is maintained.*
-
-- **Maintenance:** Managed by the Enterprise Architecture board or equivalent.
-- **Updates:** Governed by the change classification model defined in ES-001.
-
-### 66. Compliance Dashboard
-*Guidance: Define the metrics reported to engineering leadership to monitor standard adoption.*
-
-| Metric | Target | Current Value |
-| :--- | :--- | :--- |
-| Compliance Rate | [Target %] | [Value] |
-| Architecture Reviews Completed | [Target Count] | [Value] |
-| Threat Models Completed | [Target Count] | [Value] |
-| Open Architectural Exceptions | [Target Count] | [Value] |
-| Architectural Debt Items | [Target Count] | [Value] |
-
----
-
-## BLOCK L: Architecture Profiles
-
-### 67. Profile Inheritance
-*Guidance: Explain how downstream architecture profiles inherit ES-003 while introducing pattern-specific guidance.*
-
-Architecture Profiles are specialized engineering standards that apply the universal constraints of ES-003 to a specific architectural style. Downstream profiles inherit the governance model, quality expectations, and requirement schemas defined in this document. 
-
-Examples of downstream Architecture Profiles include, but are not limited to:
-- **Layered Architecture:** Guidelines for N-tier application design.
-- **Clean Architecture:** Guidelines for domain-centric, dependency-injected systems.
-- **Hexagonal Architecture:** Guidelines for ports and adapters implementations.
-- **Event-Driven Architecture:** Guidelines for asynchronous, message-based systems.
-- **Microservices:** Guidelines for highly distributed, independently deployable services.
-- **Modular Monolith:** Guidelines for logically separated single-deployment systems.
-
-These profiles introduce pattern-specific rules (e.g., "Microservices MUST NOT share a database schema") while remaining fully compliant with the universal philosophy of ES-003.
-
----
-
-## APPENDIX
-
-### Definitions
-*Guidance: Define context-specific architectural terms used in this document.*
-
-- **[Term]:** [Definition]
-
-### Glossary
-*Guidance: Define any acronyms used in this document.*
-
-- **[Acronym]:** [Definition]
-
-### Architecture Domains
-*Guidance: List the standardized domains of software architecture covered by these standards.*
-
-- **[Domain]:** [Description]
-
-### Requirement Categories
-*Guidance: Standardized categories for grouping architecture requirements.*
-
-- [Decomposition, Integration, Data, Quality, Operational, Documentation]
-
-### Rule Priority
-*Guidance: Standardized priority levels for requirements.*
-
-- **Critical:** Non-negotiable
-- **High:** Strongly enforced
-- **Medium:** Expected
-- **Low:** Advisory
-
-### Quality Attributes
-*Guidance: Core architectural characteristics supported by these requirements.*
-
-- [Scalability, Maintainability, Modularity, Reliability, Security, Observability, Portability, Performance, Resilience, Availability, Extensibility]
-
-### Requirement Classification
-*Guidance: Reference ES-001 normative keywords.*
-
-- [MUST, MUST NOT, SHALL, SHALL NOT, SHOULD, SHOULD NOT, MAY]
-
-### Compliance Levels
-*Guidance: Reference ES-001 compliance levels.*
-
-- [Mandatory, Conditional, Recommended, Informational]
-
-### Verification Methods
-*Guidance: Formal methods for verifying compliance.*
-
-- [Architecture review, ADR review, Threat modeling, Dependency analysis, Operational readiness review, Security review, Performance review]
-
-### Governance Roles
-*Guidance: Reference ES-001 governance roles.*
-
-- [Owner, Maintainer, Reviewer, Approver, Domain Owner, Technical Steward]
-
-### Reference Sources
-*Guidance: Provide links back to ES-001, RS-004, and any external architecture references.*
-
-- [Reference title and link]
-
-### Version History
-*Guidance: Track major revisions to this architecture standard.*
-
-| Version | Date | Author | Description of Change |
-| :--- | :--- | :--- | :--- |
-| [1.1.0] | [YYYY-MM-DD] | [Name] | [v1.1 Refinements (Cross-Cutting Concerns, Architecture Views, Evolution Strategy)] |
-
-## Technology Profiles
-
-This section defines how the Universal Requirements are translated into technology-specific constraints.
-Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
-
-## Project Standards
-
-This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+Universal engineering governance, compliance, review, and exception policies are strictly inherited from ES-001. 
+This section is reserved exclusively for domain-specific governance requirements (e.g., security-specific exception criteria).
 
 ## Design for Evolution
 
@@ -556,6 +366,7 @@ This section defines how this standard will safely evolve over the next decade.
 > It guides engineering decisions through universal principles rather than technology-specific preferences.
 > **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 > Engineering exists to create sustainable business value while strengthening human capability.
+
 
 
 
