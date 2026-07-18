@@ -1,26 +1,21 @@
 ---
-id: [Template ID]
-title: ES-002 Coding Standards
-version: [1.2.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Governance]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Engineering Standard Template
-eos_layer: Governance Layer
-engineering_domain: Coding Standards
-standard_family: Engineering Standards
-successor: [Successor ID, if applicable]
-upstream: [ES-001, RS-004]
-downstream: [Language Profiles]
+repository_family: Engineering Standards (ES)
+identifier: ES-002
+version: 1.0
+status: Approved
+owner: EOS Architecture Board
+audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
 # ES-002 Coding Standards
 
 ## Document Purpose
+
+> Engineering Standards guide engineering work.
+> They strengthen engineering quality through consistent practices.
+> They do not replace professional judgment.
+> Engineers remain accountable for every engineering decision.
+
 *Guidance: Explain why EOS requires Coding Standards, why coding standards differ from engineering principles, why coding consistency improves engineering quality, why coding standards must remain technology neutral, and why downstream language profiles inherit from ES-002.*
 
 The Engineering Operating System (EOS) requires universal Coding Standards to ensure that all software engineered across the organization shares a baseline of consistency, maintainability, readability, reliability, and security. While Engineering Principles (RS-004) establish the underlying philosophy of *why* we value these traits, Coding Standards formally define the enforceable requirements that dictate *how* code must be structured. Coding consistency improves engineering quality by reducing cognitive load, enabling developer mobility across projects, and establishing predictable patterns for code review and automated analysis. To remain universally applicable, ES-002 must remain strictly technology-neutral—it defines the universal engineering requirements, leaving the language-specific syntax and tooling details to be defined by downstream Language Profiles that inherit directly from this document.
@@ -72,305 +67,47 @@ Project Standards
 ↓
 Engineering Assets
 
+
+## Capability Boundaries
+
+This standard governs:
+- [To be defined]
+
+This standard does NOT govern:
+- [To be defined]
+
+## Engineering Governance
+
+### Engineering Decision Governance
+- **Decision Ownership:** [To be defined]
+- **Decision Authority:** [To be defined]
+- **Decision Classification:** [To be defined]
+- **Decision Record:** [To be defined]
+- **Decision Review:** [To be defined]
+- **Decision Retirement:** [To be defined]
+
+### Engineering Trade-off Governance
+When architectural goals conflict, this standard balances the Canonical Quality Attributes:
+(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+
+[Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
+
+## Engineering Principles Mapping
+
+| Requirement | Engineering Principle | Business Value | Quality Attribute |
+|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] |
+
+## Engineering Risk Register
+
+| Risk | Impact | Likelihood | Mitigation | Owner | Review Date |
+|---|---|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] | [Example] | [Example] |
 ---
 
 ## BLOCK A: Coding Philosophy
 
-### 1. Coding Objectives
-*Guidance: Document the primary goals these universal coding standards aim to achieve.*
 
-- [Objective 1]
-- [Objective 2]
-
-### 2. Engineering Values
-*Guidance: Document the core values prioritized in code construction (e.g., Readability over Cleverness).*
-
-- [Value 1]
-- [Value 2]
-
-### 3. Coding Scope
-*Guidance: Define the boundaries of where these universal standards apply.*
-
-- **Applicable Environments:** [e.g., All production code, internal libraries, open-source releases]
-- **Enforcement Scope:** [e.g., All new code, modified legacy code]
-
-### 4. Assumptions
-*Guidance: Document underlying assumptions regarding developer capability and tooling.*
-
-- [Assumption 1]
-- [Assumption 2]
-
-### 5. Exclusions
-*Guidance: Document explicitly what is excluded from these standards.*
-
-- **Language Syntax:** Excluded; handled by Language Profiles.
-- **Framework Conventions:** Excluded; handled by domain or project standards.
-- **Tooling Configuration:** Excluded; handled by repository standards.
-
----
-
-## BLOCK B: Code Organization
-
-*Guidance: Document universal standards governing how code is physically and logically organized.*
-
-### 6. Project Organization
-- **Requirement:** [Standard for top-level project structure]
-- **Rationale:** [Why this is required]
-
-### 7. Module Organization
-- **Requirement:** [Standard for internal module boundaries]
-- **Rationale:** [Why this is required]
-
-### 8. Layer Separation
-- **Requirement:** [Standard for separating concerns across architectural layers]
-- **Rationale:** [Why this is required]
-
-### 9. Encapsulation
-- **Requirement:** [Standard for hiding internal implementation details]
-- **Rationale:** [Why this is required]
-
-### 10. Modularity
-- **Requirement:** [Standard for designing independent, interchangeable modules]
-- **Rationale:** [Why this is required]
-
-### 11. Separation of Concerns
-- **Requirement:** [Standard ensuring components address a specific responsibility]
-- **Rationale:** [Why this is required]
-
----
-
-## BLOCK C: Naming Standards
-
-*Guidance: Document universal principles for naming elements, focusing on intent and clarity rather than specific casing rules.*
-
-### 12. Variables
-- **Requirement:** [Standard for variable naming clarity and intent]
-
-### 13. Constants
-- **Requirement:** [Standard for identifying immutable values]
-
-### 14. Functions
-- **Requirement:** [Standard for function naming, typically verb-based]
-
-### 15. Methods
-- **Requirement:** [Standard for method naming on objects/classes]
-
-### 16. Classes
-- **Requirement:** [Standard for class or primary entity naming, typically noun-based]
-
-### 17. Interfaces
-- **Requirement:** [Standard for contract or interface naming]
-
-### 18. Modules
-- **Requirement:** [Standard for module or package naming]
-
-### 19. Files
-- **Requirement:** [Standard for file naming conventions and consistency]
-
-### 20. Directories
-- **Requirement:** [Standard for directory organization and naming]
-
-### 21. Packages
-- **Requirement:** [Standard for distributable package naming]
-
----
-
-## BLOCK D: Readability Standards
-
-*Guidance: Document expectations regarding the cognitive load required to read and comprehend code.*
-
-### 22. Simplicity
-- **Requirement:** [Standard prioritizing straightforward logic over premature optimization]
-
-### 23. Consistency
-- **Requirement:** [Standard mandating uniform patterns within a codebase]
-
-### 24. Complexity
-- **Requirement:** [Standard for bounding cyclomatic complexity or nesting depth]
-
-### 25. Comments
-- **Requirement:** [Standard governing when and how comments should be used (e.g., explaining "why", not "what")]
-
-### 26. Formatting Philosophy
-- **Requirement:** [Standard establishing the expectation for automated formatting over manual styling]
-
-### 27. Self-Documenting Code
-- **Requirement:** [Standard expecting code structure and naming to convey meaning without external documentation]
-
----
-
-## BLOCK E: Functions & Modules
-
-*Guidance: Document standards for designing functions, methods, and the modules that contain them.*
-
-### 28. Function Responsibilities
-- **Requirement:** [Standard enforcing the Single Responsibility Principle for functions]
-
-### 29. Parameter Management
-- **Requirement:** [Standard for bounding parameter counts and handling configuration objects]
-
-### 30. Return Values
-- **Requirement:** [Standard for consistent return types and avoiding ambiguous returns]
-
-### 31. Side Effects
-- **Requirement:** [Standard for minimizing and explicitly documenting side effects]
-
-### 32. Module Cohesion
-- **Requirement:** [Standard for ensuring components within a module are tightly related]
-
-### 33. Coupling
-- **Requirement:** [Standard for minimizing dependencies between disparate modules]
-
-### 34. Reusability
-- **Requirement:** [Standard for designing components for reuse when appropriate]
-
----
-
-## BLOCK F: Reliability
-
-*Guidance: Document standards that ensure code behaves predictably under failure conditions.*
-
-### 35. Error Handling
-- **Requirement:** [Standard for predictable, consistent error handling strategies]
-
-### 36. Exception Handling
-- **Requirement:** [Standard for when and how exceptions should be raised and caught]
-
-### 37. Logging
-- **Requirement:** [Standard for emitting actionable, structured logs at appropriate severity levels]
-
-### 38. Defensive Programming
-- **Requirement:** [Standard for anticipating and safeguarding against unexpected internal states]
-
-### 39. Input Validation
-- **Requirement:** [Standard for validating all external data at the system boundaries]
-
----
-
-## BLOCK G: Dependencies & Configuration
-
-*Guidance: Document standards for managing external code and environment-specific configuration.*
-
-### 40. Dependency Management
-- **Requirement:** [Standard for explicitly declaring and pinning dependencies]
-
-### 41. External Libraries
-- **Requirement:** [Standard for evaluating and vetting external third-party libraries]
-
-### 42. Internal Dependencies
-- **Requirement:** [Standard for consuming shared internal libraries]
-
-### 43. Configuration Management
-- **Requirement:** [Standard for externalizing environment-specific configuration (e.g., Twelve-Factor App)]
-
-### 44. Secrets Management
-- **Requirement:** [Standard prohibiting hardcoded secrets and mandating secure injection]
-
----
-
-## BLOCK H: Security & Performance
-
-*Guidance: Document baseline expectations for secure and performant code construction.*
-
-### 45. Secure Coding
-- **Requirement:** [Standard for adhering to baseline security practices (e.g., OWASP top 10 awareness)]
-
-### 46. Sensitive Information
-- **Requirement:** [Standard for handling, masking, and storing PII or sensitive data]
-
-### 47. Performance Awareness
-- **Requirement:** [Standard for recognizing and avoiding obvious performance anti-patterns (e.g., N+1 queries)]
-
-### 48. Resource Management
-- **Requirement:** [Standard for properly acquiring and releasing system resources (memory, connections, file handles)]
-
-### 49. Scalability Considerations
-- **Requirement:** [Standard for ensuring code does not inherently prevent horizontal scaling (e.g., statelessness)]
-
----
-
-## BLOCK I: Code Quality & Maintainability
-
-*Guidance: Document expectations regarding technical debt, code smells, refactoring, and maintainability metrics.*
-
-### 50. Code Smell Governance
-*Guidance: Define how specific code smells should be actively handled during development and review.*
-
-- **Long Methods:** [Standard for identifying and extracting logic]
-- **Large Classes:** [Standard for identifying and splitting responsibilities]
-- **Duplicate Logic:** [Standard for enforcing DRY]
-- **Dead Code:** [Standard for continuous removal of unused code]
-- **Excessive Coupling:** [Standard for managing dependencies]
-- **Deep Nesting:** [Standard for guarding clauses and reducing indentation]
-
-### 51. Technical Debt Register
-*Guidance: Define the structured schema for tracking acknowledged technical debt.*
-
-Every item of technical debt MUST be tracked using the following schema:
-- **Debt ID:** [Unique ID]
-- **Description:** [What the debt is]
-- **Owner:** [Who is accountable for it]
-- **Justification:** [Why it was incurred]
-- **Impact:** [Cost of leaving it unresolved]
-- **Target Resolution:** [When or under what conditions it will be fixed]
-- **Status:** [Open, In Progress, Resolved]
-
-### 52. Maintainability Metrics
-*Guidance: Define measurable indicators of code maintainability. Exact thresholds will be set by Language Profiles.*
-
-- **Maximum Cyclomatic Complexity:** [Placeholder for complexity threshold]
-- **Function Size Guidance:** [Placeholder for maximum lines per function]
-- **Class/Module Size Guidance:** [Placeholder for maximum lines per class or module]
-- **Dependency Count Thresholds:** [Placeholder for maximum external dependencies per module]
-- **Duplication Limits:** [Placeholder for maximum acceptable duplication percentage]
-
-### 53. Refactoring Expectations
-- **Requirement:** [Standard for incorporating continuous refactoring (e.g., Boy Scout Rule)]
-
----
-
-## BLOCK J: Engineering Quality Assurance
-
-*Guidance: Standardize the active engineering quality activities independently from governance models.*
-
-### 54. Static Analysis Expectations
-- **Requirement:** [Standard for ensuring all code passes enforced static analysis tooling prior to merging]
-
-### 55. Complexity Monitoring
-- **Requirement:** [Standard for continuously monitoring code complexity and enforcing thresholds during CI/CD]
-
-### 56. Duplication Monitoring
-- **Requirement:** [Standard for enforcing automated checks against code duplication beyond permitted boundaries]
-
-### 57. Security Scanning
-- **Requirement:** [Standard for enforcing SAST and dependency vulnerability scanning in the deployment pipeline]
-
-### 58. Performance Analysis
-- **Requirement:** [Standard for ensuring critical performance paths are profiled automatically or routinely]
-
-### 59. Coverage Monitoring
-- **Requirement:** [Standard for ensuring test coverage ratios do not drop over time]
-
-### 60. Quality Gates
-- **Requirement:** [Standard for defining the exact combination of automated checks that must pass to release code]
-
----
-
-## BLOCK K: Documentation & Testing
-
-*Guidance: Document expectations for proving code correctness and maintaining developer documentation.*
-
-### 61. Code Documentation
-- **Requirement:** [Standard for documenting public interfaces and complex internal logic]
-
-### 62. API Documentation
-- **Requirement:** [Standard for documenting exposed application programming interfaces]
-
-### 63. Testability
-- **Requirement:** [Standard for designing code that is inherently testable (e.g., dependency injection)]
-
-### 64. Unit Testing
-- **Requirement:** [Standard for the scope, coverage, and structure of unit tests]
 
 ### 65. Integration Testing
 - **Requirement:** [Standard for verifying component interactions]
@@ -573,3 +310,31 @@ Whenever major changes are introduced to ES-002 or its downstream language profi
 | Version | Date | Author | Description of Change |
 | :--- | :--- | :--- | :--- |
 | [1.2.0] | [YYYY-MM-DD] | [Name] | [v1.2 Refinements (QA Block, Rule Lifecycle, Advanced Governance)] |
+
+## Technology Profiles
+
+This section defines how the Universal Requirements are translated into technology-specific constraints.
+Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
+
+## Project Standards
+
+This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+
+## Design for Evolution
+
+This section defines how this standard will safely evolve over the next decade.
+
+- **Future technologies:** [To be defined]
+- **Backward compatibility:** [To be defined]
+- **Profile extensibility:** [To be defined]
+- **Replacement strategy:** [To be defined]
+- **Deprecation policy:** [To be defined]
+- **Interoperability:** [To be defined]
+
+> This Engineering Standard exists to improve engineering capability, consistency, and long-term maintainability.
+> It guides engineering decisions through universal principles rather than technology-specific preferences.
+> **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+> Engineering exists to create sustainable business value while strengthening human capability.
+
+
+

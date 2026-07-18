@@ -1,26 +1,21 @@
 ---
-id: [Template ID]
-title: ES-003 Architecture Standards
-version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Governance]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Engineering Standard Template
-eos_layer: Governance Layer
-engineering_domain: Architecture Standards
-standard_family: Engineering Standards
-successor: [Successor ID, if applicable]
-upstream: [ES-001, RS-004]
-downstream: [Architecture Profiles]
+repository_family: Engineering Standards (ES)
+identifier: ES-003
+version: 1.0
+status: Approved
+owner: EOS Architecture Board
+audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
 # ES-003 Architecture Standards
 
 ## Document Purpose
+
+> Engineering Standards guide engineering work.
+> They strengthen engineering quality through consistent practices.
+> They do not replace professional judgment.
+> Engineers remain accountable for every engineering decision.
+
 *Guidance: Explain why EOS requires Architecture Standards, why architecture standards differ from Engineering Principles, why architecture standards differ from Coding Standards, why architecture standards remain pattern-neutral, and why downstream architecture profiles inherit from ES-003.*
 
 The Engineering Operating System (EOS) requires universal Architecture Standards to establish the foundational rules that govern how software systems are decomposed, integrated, and scaled across the organization. While Engineering Principles (RS-004) establish *why* architectural values matter, and Coding Standards (ES-002) dictate *how* individual lines of code are written, Architecture Standards define the mandatory structural constraints that ensure systems remain maintainable, secure, and resilient at a macro level. This document must remain pattern-neutral, cloud-neutral, and vendor-neutral because it defines the universal engineering expectations for *all* architectures. Specific implementations—such as microservices, event-driven, or layered architectures—are defined in downstream Architecture Profiles that inherit these universal constraints.
@@ -74,27 +69,46 @@ Project Architecture Standards
 ↓
 Engineering Assets
 
+
+## Capability Boundaries
+
+This standard governs:
+- [To be defined]
+
+This standard does NOT govern:
+- [To be defined]
+
+## Engineering Governance
+
+### Engineering Decision Governance
+- **Decision Ownership:** [To be defined]
+- **Decision Authority:** [To be defined]
+- **Decision Classification:** [To be defined]
+- **Decision Record:** [To be defined]
+- **Decision Review:** [To be defined]
+- **Decision Retirement:** [To be defined]
+
+### Engineering Trade-off Governance
+When architectural goals conflict, this standard balances the Canonical Quality Attributes:
+(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+
+[Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
+
+## Engineering Principles Mapping
+
+| Requirement | Engineering Principle | Business Value | Quality Attribute |
+|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] |
+
+## Engineering Risk Register
+
+| Risk | Impact | Likelihood | Mitigation | Owner | Review Date |
+|---|---|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] | [Example] | [Example] |
 ---
 
 ## BLOCK A: Architecture Philosophy
 
-### 1. Architecture Objectives
-*Guidance: Document the primary goals these universal architecture standards aim to achieve.*
-
-- [Objective 1]
-- [Objective 2]
-
-### 2. Engineering Values
-*Guidance: Document the core values prioritized in architectural design (e.g., High Cohesion, Loose Coupling).*
-
-- [Value 1]
-- [Value 2]
-
-### 3. Architecture Scope
-*Guidance: Define the boundaries of where these universal standards apply.*
-
-- **Applicable Systems:** [e.g., All internally developed services, major third-party integrations]
-- **Enforcement Scope:** [e.g., All new systems, major refactors]
 
 ### 4. Assumptions
 *Guidance: Document underlying assumptions regarding infrastructure capabilities and organizational maturity.*
@@ -110,12 +124,6 @@ Engineering Assets
 - **Performance Constraints:** [Hard limits on latency, throughput, etc.]
 - **Operational Constraints:** [Hosting and deployment limitations]
 
-### 6. Exclusions
-*Guidance: Document explicitly what is excluded from these standards.*
-
-- **Implementation Architectures:** Excluded; handled by Architecture Profiles.
-- **Code Structure:** Excluded; handled by Coding Standards (ES-002).
-- **Infrastructure Provisioning:** Excluded; handled by Platform Standards.
 
 ---
 
@@ -170,6 +178,8 @@ Engineering Assets
 
 ### 18. Coupling
 - **Requirement:** [Standard for minimizing dependencies and preventing tight coupling]
+
+
 
 ---
 
@@ -521,3 +531,31 @@ These profiles introduce pattern-specific rules (e.g., "Microservices MUST NOT s
 | Version | Date | Author | Description of Change |
 | :--- | :--- | :--- | :--- |
 | [1.1.0] | [YYYY-MM-DD] | [Name] | [v1.1 Refinements (Cross-Cutting Concerns, Architecture Views, Evolution Strategy)] |
+
+## Technology Profiles
+
+This section defines how the Universal Requirements are translated into technology-specific constraints.
+Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
+
+## Project Standards
+
+This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+
+## Design for Evolution
+
+This section defines how this standard will safely evolve over the next decade.
+
+- **Future technologies:** [To be defined]
+- **Backward compatibility:** [To be defined]
+- **Profile extensibility:** [To be defined]
+- **Replacement strategy:** [To be defined]
+- **Deprecation policy:** [To be defined]
+- **Interoperability:** [To be defined]
+
+> This Engineering Standard exists to improve engineering capability, consistency, and long-term maintainability.
+> It guides engineering decisions through universal principles rather than technology-specific preferences.
+> **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+> Engineering exists to create sustainable business value while strengthening human capability.
+
+
+

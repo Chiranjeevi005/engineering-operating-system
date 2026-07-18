@@ -1,26 +1,21 @@
 ---
-id: [Template ID]
-title: ES-005 Database Standards
-version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Governance]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Engineering Standard Template
-eos_layer: Governance Layer
-engineering_domain: Database Standards
-standard_family: Engineering Standards
-successor: [Successor ID, if applicable]
-upstream: [ES-001, RS-004, ES-003, ES-004]
-downstream: [Database Profiles]
+repository_family: Engineering Standards (ES)
+identifier: ES-005
+version: 1.0
+status: Approved
+owner: EOS Architecture Board
+audience: Engineers, Architects, Contributors, AI Assistants
 ---
 
 # ES-005 Database Standards
 
 ## Document Purpose
+
+> Engineering Standards guide engineering work.
+> They strengthen engineering quality through consistent practices.
+> They do not replace professional judgment.
+> Engineers remain accountable for every engineering decision.
+
 *Guidance: Explain why EOS requires Database Standards, why database standards differ from Architecture, API, and Coding Standards, why database standards remain technology-neutral, and why downstream database profiles inherit from ES-005.*
 
 The Engineering Operating System (EOS) requires universal Database Standards to establish the foundational rules governing how data is modeled, stored, owned, and governed across the organization. While Architecture Standards (ES-003) define the macro structure of systems, and API Standards (ES-004) define how data is exchanged, Database Standards strictly govern the persistence layer and state management. This document must remain database-neutral, technology-neutral, and implementation-neutral because it defines the universal engineering expectations for *all* persistent storage (e.g., data ownership, schema evolution, and integrity). Specific storage implementations—such as Relational, Document, Key-Value, or Graph databases—are defined in downstream Database Profiles that inherit these universal constraints.
@@ -82,38 +77,46 @@ Project Database Standards
 ↓
 Engineering Assets
 
+
+## Capability Boundaries
+
+This standard governs:
+- [To be defined]
+
+This standard does NOT govern:
+- [To be defined]
+
+## Engineering Governance
+
+### Engineering Decision Governance
+- **Decision Ownership:** [To be defined]
+- **Decision Authority:** [To be defined]
+- **Decision Classification:** [To be defined]
+- **Decision Record:** [To be defined]
+- **Decision Review:** [To be defined]
+- **Decision Retirement:** [To be defined]
+
+### Engineering Trade-off Governance
+When architectural goals conflict, this standard balances the Canonical Quality Attributes:
+(Simplicity, Maintainability, Reliability, Scalability, Performance, Security, Availability, Integrity, Observability, Recoverability, Portability, Testability, Usability, Extensibility).
+
+[Priority 1] -> [Priority 2] -> [Priority 3] -> [Priority 4]
+
+## Engineering Principles Mapping
+
+| Requirement | Engineering Principle | Business Value | Quality Attribute |
+|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] |
+
+## Engineering Risk Register
+
+| Risk | Impact | Likelihood | Mitigation | Owner | Review Date |
+|---|---|---|---|---|---|
+| [Example] | [Example] | [Example] | [Example] | [Example] | [Example] |
 ---
 
 ## BLOCK A: Database Philosophy
 
-### 1. Database Objectives
-*Guidance: Document the primary goals these universal database standards aim to achieve.*
-
-- [Objective 1]
-- [Objective 2]
-
-### 2. Engineering Values
-*Guidance: Document the core values prioritized in persistence design (e.g., Integrity over Performance).*
-
-- [Value 1]
-- [Value 2]
-
-### 3. Database Independence Statement
-*Guidance: Acknowledge that database governance sits above specific storage technologies.*
-
-> The engineering concepts defined in ES-005 shall remain valid regardless of database model, storage engine, persistence technology, deployment topology, or database vendor.
-
-### 4. Database Scope & Persistence Model Classification
-*Guidance: Define the boundaries of where these universal standards apply and classify the types of persistence models.*
-
-- **Applicable Datastores:** [e.g., All relational, NoSQL, graph, and time-series datastores managing production data]
-- **Relational:** SQL databases prioritizing ACID transactions.
-- **Document:** Document-oriented NoSQL databases.
-- **Key-Value:** High-performance caching and fast-lookup datastores.
-- **Graph:** Relationship-centric datastores.
-- **Time-Series:** Event and metric datastores.
-- **Object:** Blob and file storage.
-- **Event Store:** Immutable append-only logs for event sourcing.
 
 ### 5. Assumptions
 *Guidance: Document underlying assumptions regarding database infrastructure capabilities and organizational maturity.*
@@ -121,12 +124,6 @@ Engineering Assets
 - [Assumption 1]
 - [Assumption 2]
 
-### 6. Exclusions
-*Guidance: Document explicitly what is excluded from these standards.*
-
-- **Database Engine Implementation:** Excluded; handled by Database Profiles.
-- **Data Warehouse/Data Lake Design:** Excluded; handled by Data Engineering Standards.
-- **ORM Configuration:** Excluded; handled by Coding Standards (ES-002) or Language Profiles.
 
 ---
 
@@ -185,6 +182,8 @@ Engineering Assets
 
 ### 17. Database Responsibilities
 - **Requirement:** [Standard dictating what business logic belongs in code versus what belongs in the database]
+
+
 
 ---
 
@@ -644,3 +643,31 @@ These profiles introduce technology-specific rules (e.g., "Relational Databases 
 | Version | Date | Author | Description of Change |
 | :--- | :--- | :--- | :--- |
 | [1.1.0] | [YYYY-MM-DD] | [Name] | [v1.1 Refinements (Operations Governance, Data Contracts, Cross-Boundary Ownership)] |
+
+## Technology Profiles
+
+This section defines how the Universal Requirements are translated into technology-specific constraints.
+Technology profiles (e.g., TypeScript Profile, AWS Profile) MUST inherit from this standard and provide concrete implementations for the requirements defined above.
+
+## Project Standards
+
+This section defines how project-specific implementations apply the Technology Profiles. Project standards MUST NOT contradict Universal Requirements.
+
+## Design for Evolution
+
+This section defines how this standard will safely evolve over the next decade.
+
+- **Future technologies:** [To be defined]
+- **Backward compatibility:** [To be defined]
+- **Profile extensibility:** [To be defined]
+- **Replacement strategy:** [To be defined]
+- **Deprecation policy:** [To be defined]
+- **Interoperability:** [To be defined]
+
+> This Engineering Standard exists to improve engineering capability, consistency, and long-term maintainability.
+> It guides engineering decisions through universal principles rather than technology-specific preferences.
+> **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+> Engineering exists to create sustainable business value while strengthening human capability.
+
+
+
