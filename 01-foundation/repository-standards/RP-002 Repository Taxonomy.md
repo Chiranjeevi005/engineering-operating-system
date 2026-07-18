@@ -50,7 +50,7 @@ This standard governs the structural hierarchy of the EOS repository. It applies
 ## Responsibilities
 - **EOS Architects (Humans):** MUST design, approve, and maintain this taxonomy. They hold final authority over structural evolution.
 - **Engineering Personnel (Humans):** MUST place artifacts in strict accordance with this taxonomy.
-- **AI Assistants / Automation (Machines):** MUST validate incoming artifacts against this standard, map dependencies, and assist engineers in finding the correct structural location. AI MUST NOT unilaterally alter the taxonomy.
+- **AI Assistants:** **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 
 ## Relationships
 - **Inherits:** RP-001 Foundation
@@ -82,3 +82,6 @@ Evolution of the taxonomy is permitted only when an entirely new capability emer
 
 ## Appendix
 None.
+
+
+

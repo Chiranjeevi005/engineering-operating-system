@@ -37,7 +37,7 @@ This standard governs the overarching design, management, and evolution of the E
 
 ## Responsibilities
 - **EOS Architects (Humans):** MUST define the repository's purpose, establish structural standards, make all architectural decisions, and accept ultimate responsibility for the repository's health.
-- **AI Assistants / Automation (Machines):** MUST assist, recommend, analyze, and automate approved work strictly within the boundaries defined by human architects. AI MUST NEVER assume engineering authority.
+- **AI Assistants:** **Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
 
 ## Relationships
 - **Inherits:** None (Constitutional Document)
@@ -68,3 +68,6 @@ Changes to this foundation are inherently high-risk and MUST only occur when a p
 
 ## Appendix
 None.
+
+
+

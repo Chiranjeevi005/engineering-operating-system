@@ -325,7 +325,9 @@ Responsible for:
 
 ## AI Assistants
 
-Artificial Intelligence may:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - analyze repository structure
 - detect migration risks
@@ -388,3 +390,6 @@ Artificial Intelligence may accelerate repository analysis and migration.
 Humans remain responsible for deciding why, when, and how the repository evolves.
 
 EOS evolves deliberately so that future engineers inherit a repository that is more understandable, more consistent, and more valuable than the one that came before.
+
+
+

@@ -283,7 +283,9 @@ Responsible for:
 
 ## AI Assistants
 
-Artificial Intelligence may:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - identify inactive artifacts,
 - detect superseded documents,
@@ -343,3 +345,6 @@ Artificial Intelligence may assist in identifying archival opportunities and val
 Humans remain responsible for deciding what should be preserved, what should remain active, and what may be permanently removed.
 
 EOS protects both the future of engineering and the history that made it possible.
+
+
+

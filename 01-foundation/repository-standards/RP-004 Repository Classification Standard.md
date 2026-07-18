@@ -123,6 +123,7 @@ Every governed artifact belongs to one official repository family.
 | Repository Family | Purpose |
 |-------------------|---------|
 | RP | Repository governance |
+| AG | Architecture governance and review methodologies |
 | ES | Engineering principles and practices |
 | EP | Engineering capability profiles |
 | RS | Research methodologies and standards |
@@ -245,7 +246,9 @@ Responsible for:
 
 ## AI Assistants
 
-Artificial Intelligence shall:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - recommend appropriate classifications,
 - detect duplicate artifacts,
@@ -298,3 +301,6 @@ Repository classification is the engineering discipline of assigning every artif
 Classification exists to strengthen engineering clarity, reduce ambiguity, preserve repository consistency, and improve long-term maintainability.
 
 A well-classified repository enables engineers and Artificial Intelligence to collaborate within a shared engineering structure while preserving human governance, engineering responsibility, and the integrity of the Engineering Operating System.
+
+
+

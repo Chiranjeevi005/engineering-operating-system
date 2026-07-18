@@ -403,7 +403,9 @@ Responsible for:
 
 ## AI Assistants
 
-Artificial Intelligence shall:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - generate names that comply with this standard
 - validate repository naming consistency
@@ -485,3 +487,6 @@ They exist to strengthen engineering communication, improve discoverability, red
 A consistent naming convention enables engineers and Artificial Intelligence to collaborate within a shared engineering language.
 
 EOS naming standards exist to strengthen engineering capability—not to encourage individual naming preferences.
+
+
+

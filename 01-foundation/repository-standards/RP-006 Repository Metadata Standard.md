@@ -254,7 +254,9 @@ Responsible for:
 
 ## AI Assistants
 
-Artificial Intelligence shall:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - validate metadata completeness
 - detect inconsistencies
@@ -310,3 +312,6 @@ Without metadata, artifacts become isolated documents.
 With metadata, they become governed engineering assets.
 
 EOS uses metadata to strengthen discoverability, traceability, governance, and collaboration while preserving human ownership and enabling Artificial Intelligence to assist within clearly defined engineering boundaries.
+
+
+

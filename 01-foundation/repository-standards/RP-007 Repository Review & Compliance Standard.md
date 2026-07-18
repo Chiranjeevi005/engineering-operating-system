@@ -282,7 +282,9 @@ Responsible for:
 
 ## AI Assistants
 
-Responsible for:
+**Artificial Intelligence operates within the engineering boundaries established by approved human governance. AI may assist, analyze, recommend, and validate. Final engineering authority always remains with human engineers.**
+
+
 
 - performing automated validation
 - identifying potential issues
@@ -353,3 +355,6 @@ Reviews exist to strengthen engineering quality, preserve repository integrity, 
 Artificial Intelligence may accelerate validation, identify inconsistencies, and improve review efficiency.
 
 Humans remain responsible for engineering judgment, approval, accountability, and the long-term quality of the Engineering Operating System.
+
+
+
