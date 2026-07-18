@@ -85,6 +85,8 @@ Project Standards (PS)
 ↓
 Engineering Assets
 
+*(Note: The Human-Centered AI Constitution HC-001 does not participate in this linear engineering traceability; instead, it sits above this entire hierarchy, constraining every AI participant that interacts with these artifacts.)*
+
 ## Capability Boundaries
 
 This standard governs:

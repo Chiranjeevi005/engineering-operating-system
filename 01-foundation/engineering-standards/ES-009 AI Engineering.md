@@ -102,7 +102,9 @@ Traceability follows the canonical EOS Engineering Traceability Model defined in
 - [Philosophy inherited from RS]
 
 **Dependencies:**
-- [Explicit links to other ES documents]
+- **Mandatory:** HC-001 AI Engineering Constitution (All constitutional AI principles)
+- **Mandatory:** ES-001 Engineering Standards Foundation
+- **Inherited:** ES-002, ES-003, ES-006, ES-007, ES-008
 
 ## Engineering Governance
 

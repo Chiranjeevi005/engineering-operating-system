@@ -33,7 +33,8 @@ This standard governs the structural hierarchy of the EOS repository. It applies
 4. **Resilience to Change:** The addition of new technological capabilities MUST NOT necessitate refactoring the root taxonomy.
 
 ## Normative Rules
-1. The root of the repository MUST contain exactly six lifecycle domains:
+1. The root of the repository MUST contain exactly seven lifecycle domains:
+   - `00-constitution`
    - `01-foundation`
    - `02-implementation`
    - `03-projects`
@@ -80,8 +81,16 @@ This document is subject to an annual review. Maintenance is purely structural; 
 ## Future Evolution
 Evolution of the taxonomy is permitted only when an entirely new capability emerges that cannot be logically classified into the existing six domains. If such an event occurs, the change MUST be preceded by a formal architectural review, a revision of this standard, and a structured migration plan. Any new domain must first be incubated as an Architecture Decision Record (ADR) before it can trigger a formal revision of the RP-002 taxonomy.
 
-## Appendix
-None.
+## Appendix: Artifact Families
 
+**Artifact Family:** HC
 
+**Purpose:** Defines constitutional principles governing all AI-assisted engineering activities within EOS.
 
+**Responsibility:** Human-centered governance.
+
+**Scope:** Applies to every AI participant.
+
+**Dependencies:** None.
+
+**Inherited By:** Entire EOS.
