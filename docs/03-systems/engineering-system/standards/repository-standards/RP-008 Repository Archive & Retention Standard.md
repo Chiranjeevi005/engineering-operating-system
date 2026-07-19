@@ -1,5 +1,5 @@
 ---
-identifier: RP-008 Repository Archive & Retention Standard
+identifier: RP-008
 title: RP 008 Repository Archive & Retention Standard
 version: 1.0
 status: Active

@@ -1,5 +1,5 @@
 ---
-identifier: RP-005 Repository Evolution & Migration Standard
+identifier: RP-005
 title: RP 005 Repository Evolution & Migration Standard
 version: 1.0
 status: Active

@@ -1,5 +1,5 @@
 ---
-identifier: RS-003 Comparative Analysis
+identifier: RS-003
 title: RS-003 Comparative Analysis
 version: [1.1.0]
 status: Draft

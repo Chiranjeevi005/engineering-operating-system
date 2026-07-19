@@ -1,5 +1,5 @@
 ---
-identifier: EA-004-Implementation-Specification
+identifier: EA-004-Implementation
 title: "[Capability Name] - Implementation Specification"
 version: "[0.1.0]"
 status: Draft

@@ -1,5 +1,5 @@
 ---
-identifier: RP-002 Repository Taxonomy
+identifier: RP-002
 title: RP 002 Repository Taxonomy
 version: 1.0
 status: Active

@@ -1,5 +1,5 @@
 ---
-identifier: AG-001 Architecture Review Process
+identifier: AG-001
 title: AG 001 Architecture Review Process
 version: 1.0
 status: Active

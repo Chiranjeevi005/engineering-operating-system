@@ -1,5 +1,5 @@
 ---
-identifier: Production-Readiness-Review
+identifier: PRR-Template
 title: Production Readiness Review (PRR)
 version: 1.1
 status: Active

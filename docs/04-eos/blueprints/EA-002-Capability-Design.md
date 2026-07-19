@@ -1,5 +1,5 @@
 ---
-identifier: EA-002-Capability-Design
+identifier: EA-002-Capability
 title: "[Capability Name] - Capability Design"
 version: "[0.1.0]"
 status: Draft

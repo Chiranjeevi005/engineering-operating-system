@@ -1,5 +1,5 @@
 ---
-identifier: Capability-Blueprint
+identifier: CB-Template
 title: Capability Blueprint (CB)
 version: 1.1
 status: Active

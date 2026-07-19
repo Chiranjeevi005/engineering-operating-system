@@ -1,5 +1,5 @@
 ---
-identifier: Architecture-Decision-Record
+identifier: ADR-Template
 title: Architecture Decision Record (ADR)
 version: 1.1
 status: Active

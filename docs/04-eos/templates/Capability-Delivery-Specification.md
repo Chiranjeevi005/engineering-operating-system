@@ -1,5 +1,5 @@
 ---
-identifier: Capability-Delivery-Specification
+identifier: CDEL-Template
 title: Capability Delivery Specification (CDS)
 version: 1.1
 status: Active

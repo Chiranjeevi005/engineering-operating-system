@@ -1,5 +1,5 @@
 ---
-identifier: SK-101 TypeScript
+identifier: SK-101
 title: SK 101 TypeScript
 version: 1.0
 status: Active

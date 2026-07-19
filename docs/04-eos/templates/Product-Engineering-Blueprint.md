@@ -1,5 +1,5 @@
 ---
-identifier: Product-Engineering-Blueprint
+identifier: PEB-Template
 title: Product Engineering Blueprint (PEB) - [Product Name]
 version: 1.0
 status: Active

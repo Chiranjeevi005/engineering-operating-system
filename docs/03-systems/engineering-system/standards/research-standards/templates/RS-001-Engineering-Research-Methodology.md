@@ -1,5 +1,5 @@
 ---
-identifier: RS-001-Engineering-Research-Methodology
+identifier: RS-001-Engineering
 title: RS-001 Engineering Research Methodology
 version: [1.1.0]
 status: Draft

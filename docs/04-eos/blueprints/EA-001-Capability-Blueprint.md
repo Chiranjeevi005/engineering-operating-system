@@ -1,5 +1,5 @@
 ---
-identifier: EA-001-Capability-Blueprint
+identifier: EA-001-Capability
 title: "[Capability Name] - Capability Blueprint"
 version: "[0.1.0]"
 status: Draft

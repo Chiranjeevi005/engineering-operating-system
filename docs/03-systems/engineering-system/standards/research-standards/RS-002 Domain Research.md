@@ -1,5 +1,5 @@
 ---
-identifier: RS-002 Domain Research
+identifier: RS-002
 title: RS-002 Domain Research
 version: [1.1.0]
 status: Draft

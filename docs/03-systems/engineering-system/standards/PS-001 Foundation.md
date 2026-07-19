@@ -1,5 +1,5 @@
 ---
-identifier: PS-001 Foundation
+identifier: PS-001
 title: PS 001 Foundation
 version: 1.0
 status: Active

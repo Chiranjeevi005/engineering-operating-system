@@ -1,5 +1,5 @@
 ---
-identifier: EA-005-Capability-Validation
+identifier: EA-005-Capability
 title: EA-005 Capability Validation
 version: [1.1.0]
 status: Draft

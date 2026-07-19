@@ -1,5 +1,5 @@
 ---
-identifier: RS-004 Engineering Principles
+identifier: RS-004
 title: RS-004 Engineering Principles
 version: [1.1.0]
 status: Draft

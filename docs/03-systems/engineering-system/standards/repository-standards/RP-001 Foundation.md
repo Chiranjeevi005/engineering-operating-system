@@ -1,5 +1,5 @@
 ---
-identifier: RP-001 Foundation
+identifier: RP-001
 title: RP 001 Foundation
 version: 1.0
 status: Active

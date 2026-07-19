@@ -1,5 +1,5 @@
 ---
-identifier: RP-003 Repository Naming Convention
+identifier: RP-003
 title: RP 003 Repository Naming Convention
 version: 1.0
 status: Active

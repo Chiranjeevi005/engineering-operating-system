@@ -1,5 +1,5 @@
 ---
-identifier: SK-001 Foundation
+identifier: SK-001
 title: SK 001 Foundation
 version: 1.0
 status: Active

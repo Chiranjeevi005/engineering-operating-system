@@ -1,5 +1,5 @@
 ---
-identifier: Engineering-Profile-Catalog
+identifier: EP-Catalog
 title: Engineering Profile Catalog
 version: 1.0
 status: Active

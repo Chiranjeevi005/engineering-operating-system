@@ -1,5 +1,5 @@
 ---
-identifier: EA-003-Executable-Delivery-Plan
+identifier: EA-003-Executable
 title: "[Capability Name] - Executable Delivery Plan"
 version: "[0.1.0]"
 status: Draft

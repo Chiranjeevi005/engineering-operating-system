@@ -1,5 +1,5 @@
 ---
-identifier: RP-006 Repository Metadata Standard
+identifier: RP-006
 title: RP 006 Repository Metadata Standard
 version: 1.0
 status: Active

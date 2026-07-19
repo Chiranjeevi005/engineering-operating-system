@@ -1,5 +1,5 @@
 ---
-identifier: RP-007 Repository Review & Compliance Standard
+identifier: RP-007
 title: RP 007 Repository Review & Compliance Standard
 version: 1.0
 status: Active

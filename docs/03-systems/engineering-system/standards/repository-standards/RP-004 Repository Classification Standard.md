@@ -1,5 +1,5 @@
 ---
-identifier: RP-004 Repository Classification Standard
+identifier: RP-004
 title: RP 004 Repository Classification Standard
 version: 1.0
 status: Active

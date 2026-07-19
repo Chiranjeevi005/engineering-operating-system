@@ -1,5 +1,5 @@
 ---
-identifier: Capability-Design-Specification
+identifier: CDS-Template
 title: Capability Design Specification (CDS)
 version: 1.1
 status: Active

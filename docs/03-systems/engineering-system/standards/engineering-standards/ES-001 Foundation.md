@@ -1,5 +1,5 @@
 ---
-identifier: ES-001 Foundation
+identifier: ES-001
 title: ES 001 Foundation
 version: 1.0
 status: Active
