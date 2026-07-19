@@ -1,10 +1,20 @@
 ---
 identifier: GHS-001
+title: GHS 001 Governance Hierarchy Specification
 version: 1.0
-status: Approved
-audience: Architects, Engineers, AI Assistants
+status: Active
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Governance Standard
+lifecycle: Governance
+governed_by: 
+  - HC-001
+inherits_from:
+  - HC-001
 ---
-
 # GHS-001 — Governance Hierarchy Specification
 
 ## 1. Purpose

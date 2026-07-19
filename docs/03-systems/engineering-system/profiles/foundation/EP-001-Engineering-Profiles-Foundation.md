@@ -1,12 +1,20 @@
 ---
-repository_family: Engineering Profiles (EP)
 identifier: EP-001
+title: EP 001 Engineering Profiles Foundation
 version: 1.0
-status: Approved
-owner: EOS Architecture Board
-audience: Engineers, Architects, Contributors, AI Assistants
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Profile
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # EP-001 Engineering Profiles Foundation
 
 > Engineering Standards guide engineering work.

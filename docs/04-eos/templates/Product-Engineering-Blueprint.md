@@ -1,36 +1,20 @@
 ---
-id: PEB-[PRODUCT_ID]
+identifier: Product-Engineering-Blueprint
 title: Product Engineering Blueprint (PEB) - [Product Name]
-
 version: 1.0
-status: PRODUCTION
-lifecycle: 🔒 FROZEN
-
-owner: [Name or Role]
-reviewer: [Name or Role]
-approver: [Name or Role]
-
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-
-product: [Product Name]
-domain: [Primary Domain]
-
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
 inherits_from:
-  - Enterprise Strategy
-  - Business Vision
-
-produces:
-  - EA-001 Capability Blueprints
-
-traceability:
-  capability: []
-  design: []
-  delivery: []
-  adr: []
-  validation: []
+  - ENG-001
 ---
-
 # Product Engineering Blueprint: [Product Name]
 
 ## Document Purpose

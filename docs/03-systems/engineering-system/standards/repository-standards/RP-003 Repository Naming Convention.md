@@ -1,4 +1,20 @@
-
+---
+identifier: RP-003 Repository Naming Convention
+title: RP 003 Repository Naming Convention
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - IAS-001
+inherits_from:
+  - IAS-001
+---
 # RP-003 Repository Naming Convention
 
 **Repository Family:** Repository Standards (RP)

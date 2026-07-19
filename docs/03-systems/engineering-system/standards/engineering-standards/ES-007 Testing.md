@@ -1,12 +1,20 @@
 ---
-repository_family: Engineering Standards (ES)
 identifier: ES-007
+title: ES 007 Testing
 version: 1.0
-status: Approved
-owner: EOS EOS Architecture Board
-audience: Engineers, Architects, Contributors, AI Assistants
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Engineering Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # ES-007 Testing Standards
 
 ## Document Purpose

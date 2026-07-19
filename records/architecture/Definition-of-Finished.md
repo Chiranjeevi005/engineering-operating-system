@@ -1,18 +1,19 @@
-﻿---
-Title: Definition of Finished
-Document ID: ADR-003
-Version: 1.0
-Status: Approved
-Owner: Chief Engineering Architect
-Created: 2026-07-17
-Updated: 2026-07-17
-Dependencies: None
-Approval: Approved
-Classification: Internal
-Review Frequency: Annually
-Related Artifacts: None
-Next Review: 2027-07-17
 ---
-
+identifier: ADR-003
+title: Definition of Finished
+version: 1.0
+status: Active
+owner: Records
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Record
+lifecycle: Record
+governed_by: 
+  - OM-001
+inherits_from:
+  - OM-001
+---
 # Definition of Finished
 

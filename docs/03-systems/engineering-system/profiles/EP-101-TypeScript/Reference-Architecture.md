@@ -1,12 +1,20 @@
 ---
-repository_family: Engineering Profiles (EP)
 identifier: EP-101-RA
+title: Reference Architecture
 version: 1.0
-status: Approved
-owner: EOS Architecture Board
-audience: Engineers, Architects, Contributors, AI Assistants
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Profile
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # 13. Reference Architecture
 
 ## 13.1 Architecture Philosophy

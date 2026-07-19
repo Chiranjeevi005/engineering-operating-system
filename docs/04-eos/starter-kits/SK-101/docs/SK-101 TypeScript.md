@@ -1,3 +1,20 @@
+---
+identifier: SK-101 TypeScript
+title: SK 101 TypeScript
+version: 1.0
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Starter Kit
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
+---
 # SK-101 — TypeScript Starter Kit
 
 ## 1. Starter Kit Identity

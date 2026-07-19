@@ -1,10 +1,17 @@
 ---
-repository_family: Human-Centered AI Constitution (HC)
 identifier: HC-001
+title: HC 001 AI Engineering Constitution
 version: 1.0
-status: Approved
-owner: EOS Architecture Board
-audience: AI Assistants, Engineers, Architects, Contributors
+status: Active
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Constitution
+lifecycle: Governance
+governed_by: []
+inherits_from: []
 ---
 # HC-001 AI Engineering Constitution
 

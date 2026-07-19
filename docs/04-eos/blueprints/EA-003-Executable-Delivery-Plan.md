@@ -1,31 +1,20 @@
 ---
-id: "[EA-003-ID]"
+identifier: EA-003-Executable-Delivery-Plan
 title: "[Capability Name] - Executable Delivery Plan"
 version: "[0.1.0]"
-status: "[Draft | Active | Deprecated]"
-lifecycle: "[Planning | Execution | Complete]"
-owner: "[Owner Name/Team]"
-reviewer: "[Reviewer Name]"
-approver: "[Approver Name]"
-created: "[YYYY-MM-DD]"
-updated: "[YYYY-MM-DD]"
-capability:
-  capability_id: "[CAP-ID]"
-  capability_name: "[Capability Name]"
-  capability_domain: "[Domain Name]"
-classification:
-  artifact_type: Executable Delivery Plan
-  eos_layer: Engineering Asset Layer
-  engineering_scope: Capability
-  authoritative_source: Engineering
-  successor: EA-005 Capability Validation
-traceability:
-  upstream:
-    - "[EA-002-ID]"
-  downstream:
-    - "[EA-005-ID]"
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Blueprint
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-003: Executable Delivery Plan
 
 ## Document Purpose

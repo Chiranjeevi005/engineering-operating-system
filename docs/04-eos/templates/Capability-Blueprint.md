@@ -1,17 +1,20 @@
 ---
-id: EA-001
+identifier: Capability-Blueprint
 title: Capability Blueprint (CB)
 version: 1.1
-status: Approved
-classification: Platform
-traceability:
-  capability:
-  design:
-  delivery:
-  adr: []
-  prr:
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-001: Capability Blueprint (CB)
 
 ## 1. Core Engineering Object: Capability

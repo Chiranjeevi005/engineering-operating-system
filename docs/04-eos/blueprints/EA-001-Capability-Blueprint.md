@@ -1,38 +1,20 @@
 ---
-id: "[EA-001-ID]"
+identifier: EA-001-Capability-Blueprint
 title: "[Capability Name] - Capability Blueprint"
 version: "[0.1.0]"
-status: "[Draft | Active | Deprecated]"
-lifecycle: "[Discovery | Engineering | Maintenance]"
-owner: "[Owner Name/Team]"
-reviewer: "[Reviewer Name]"
-approver: "[Approver Name]"
-created: "[YYYY-MM-DD]"
-updated: "[YYYY-MM-DD]"
-capability:
-  capability_id: "[CAP-ID]"
-  capability_name: "[Capability Name]"
-  capability_domain: "[Domain Name]"
-  priority: "[Critical | High | Medium | Low]"
-  owner: "[Owner Name/Team]"
-classification:
-  artifact_type: Capability Blueprint
-  eos_layer: Engineering Asset Layer
-  engineering_scope: Capability
-  authoritative_source: Engineering
-  successor: EA-002 Capability Design
-traceability:
-  upstream:
-    - "[PEB-ID]"
-  downstream:
-    design:
-      - "[EA-002-ID]"
-    delivery:
-      - "[EA-003-ID]"
-    validation:
-      - "[EA-005-ID]"
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Blueprint
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-001: Capability Blueprint
 
 ## Document Purpose

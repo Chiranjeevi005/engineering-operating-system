@@ -1,31 +1,20 @@
 ---
-id: "[EA-002-ID]"
+identifier: EA-002-Capability-Design
 title: "[Capability Name] - Capability Design"
 version: "[0.1.0]"
-status: "[Draft | Active | Deprecated]"
-lifecycle: "[Design | Implementation | Maintenance]"
-owner: "[Owner Name/Team]"
-reviewer: "[Reviewer Name]"
-approver: "[Approver Name]"
-created: "[YYYY-MM-DD]"
-updated: "[YYYY-MM-DD]"
-capability:
-  capability_id: "[CAP-ID]"
-  capability_name: "[Capability Name]"
-  capability_domain: "[Domain Name]"
-classification:
-  artifact_type: Capability Design
-  eos_layer: Engineering Asset Layer
-  engineering_scope: Capability
-  authoritative_source: Engineering
-  successor: EA-003 Delivery Plan
-traceability:
-  upstream:
-    - "[EA-001-ID]"
-  downstream:
-    - "[EA-003-ID]"
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Blueprint
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-002: Capability Design
 
 ## Document Purpose

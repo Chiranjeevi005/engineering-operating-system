@@ -1,3 +1,20 @@
+---
+identifier: PS-001 Foundation
+title: PS 001 Foundation
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
+---
 # PS-001 — Project Standards Foundation
 
 ## 1. Project Standard Identity

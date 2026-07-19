@@ -1,3 +1,20 @@
+---
+identifier: AG-001 Architecture Review Process
+title: AG 001 Architecture Review Process
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Process
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
+---
 # AG-001 Architecture Review Process
 
 **Repository Family:** Architecture Governance (AG)

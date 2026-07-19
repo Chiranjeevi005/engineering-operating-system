@@ -1,31 +1,20 @@
 ---
-id: "[EA-004-ID]"
+identifier: EA-004-Implementation-Specification
 title: "[Capability Name] - Implementation Specification"
 version: "[0.1.0]"
-status: "[Draft | Active | Deprecated]"
-lifecycle: "[Execution | Maintenance]"
-owner: "[Owner Name/Team]"
-reviewer: "[Reviewer Name]"
-approver: "[Approver Name]"
-created: "[YYYY-MM-DD]"
-updated: "[YYYY-MM-DD]"
-capability:
-  capability_id: "[CAP-ID]"
-  capability_name: "[Capability Name]"
-  capability_domain: "[Domain Name]"
-classification:
-  artifact_type: Implementation Specification
-  eos_layer: Engineering Asset Layer
-  engineering_scope: Capability
-  authoritative_source: Engineering
-  successor: EA-005 Capability Validation
-traceability:
-  upstream:
-    - "[EA-003-ID]"
-  downstream:
-    - "[EA-005-ID]"
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Blueprint
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-004: Implementation Specification
 
 ## Document Purpose

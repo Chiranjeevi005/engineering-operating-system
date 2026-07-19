@@ -1,10 +1,20 @@
 ---
 identifier: CHARTER-001
+title: HC AI SDLC Constitutional Charter
 version: 1.0
 status: Draft
-audience: Architects, Engineers, AI Assistants
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Constitutional Charter
+lifecycle: Governance
+governed_by: 
+  - HC-001
+inherits_from:
+  - HC-001
 ---
-
 # HC-AI SDLC Constitutional Charter
 
 ## 1. Vision

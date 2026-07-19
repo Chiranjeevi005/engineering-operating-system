@@ -1,10 +1,20 @@
 ---
 identifier: OM-001
+title: OM 001 Operational Model Standard
 version: 1.0
 status: Active
-audience: Architects, Engineers, AI Assistants
+owner: Operational
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Operational Standard
+lifecycle: Operational
+governed_by: 
+  - GHS-001
+inherits_from:
+  - GHS-001
 ---
-
 # OM-001 — Operational Model Standard
 
 ## 1. Purpose

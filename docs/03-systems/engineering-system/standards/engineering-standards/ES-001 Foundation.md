@@ -1,4 +1,20 @@
-
+---
+identifier: ES-001 Foundation
+title: ES 001 Foundation
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Engineering Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
+---
 ---
 id: [Template ID]
 title: ES-001 Engineering Standards Foundation

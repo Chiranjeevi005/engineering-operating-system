@@ -1,3 +1,20 @@
+---
+identifier: SK-001 Foundation
+title: SK 001 Foundation
+version: 1.0
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Starter Kit
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
+---
 # SK-001 Starter Kit Foundation
 
 ## 1. Starter Kit Identity

@@ -1,12 +1,20 @@
 ---
-repository_family: Engineering Profiles (EP)
 identifier: EP-[XXX]
+title: Engineering Profile Template
 version: 1.0
 status: Draft
-owner: EOS Architecture Board
-audience: Engineers, Architects, Contributors, AI Assistants
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Profile
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # EP-[XXX] [Technology Name] Core Profile
 
 > This Engineering Profile defines the enterprise implementation of an approved technology.

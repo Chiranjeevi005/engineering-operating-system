@@ -1,10 +1,20 @@
 ---
 identifier: AOS-001
+title: AOS 001 Agent Operating Standard
 version: 1.0
 status: Draft
-audience: AI Assistants, Engineers
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Governance Standard
+lifecycle: Governance
+governed_by: 
+  - GHS-001
+inherits_from:
+  - GHS-001
 ---
-
 # AOS-001 — Agent Operating Standard
 
 ## 1. Purpose

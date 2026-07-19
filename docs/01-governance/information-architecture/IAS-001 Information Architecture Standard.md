@@ -1,10 +1,20 @@
 ---
 identifier: IAS-001
+title: IAS 001 Information Architecture Standard
 version: 1.0
-status: Approved
-audience: Architects, Engineers, AI Assistants
+status: Active
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Governance Standard
+lifecycle: Governance
+governed_by: 
+  - GHS-001
+inherits_from:
+  - GHS-001
 ---
-
 # IAS-001 — Information Architecture Standard
 
 ## 1. Purpose

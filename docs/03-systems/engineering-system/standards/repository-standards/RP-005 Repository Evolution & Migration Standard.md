@@ -1,3 +1,20 @@
+---
+identifier: RP-005 Repository Evolution & Migration Standard
+title: RP 005 Repository Evolution & Migration Standard
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - IAS-001
+inherits_from:
+  - IAS-001
+---
 # RP-005 Repository Evolution & Migration Standard
 
 **Repository Family:** Repository Standards (RP)

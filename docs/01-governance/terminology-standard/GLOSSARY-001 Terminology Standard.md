@@ -1,10 +1,20 @@
 ---
 identifier: GLOSSARY-001
+title: GLOSSARY 001 Terminology Standard
 version: 1.0
 status: Draft
-audience: Architects, Engineers, AI Assistants
+owner: Governance
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Governance Standard
+lifecycle: Governance
+governed_by: 
+  - GHS-001
+inherits_from:
+  - GHS-001
 ---
-
 # GLOSSARY-001 — Terminology Standard
 
 ## 1. Purpose

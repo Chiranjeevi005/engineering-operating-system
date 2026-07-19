@@ -1,16 +1,20 @@
 ---
-id: EA-004
+identifier: Architecture-Decision-Record
 title: Architecture Decision Record (ADR)
 version: 1.1
-status: Approved
-traceability:
-  capability:
-  design:
-  delivery:
-  adr: []
-  prr:
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-004: Architecture Decision Record
 
 ## 1. Core Engineering Object: Architecture Decision

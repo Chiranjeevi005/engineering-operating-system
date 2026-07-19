@@ -1,19 +1,20 @@
-﻿---
-Title: Repository Manifest
-Document ID: EOS-016
-Version: 1.0
-Status: Approved
-Owner: Chief Engineering Architect
-Created: 2026-07-17
-Updated: 2026-07-17
-Dependencies: None
-Approval: Approved
-Classification: Internal
-Review Frequency: Annually
-Related Artifacts: None
-Next Review: 2027-07-17
 ---
-
+identifier: EOS-016
+title: Repository Manifest
+version: 1.0
+status: Active
+owner: Records
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Release Record
+lifecycle: Record
+governed_by: 
+  - ENG-001
+inherits_from:
+  - ENG-001
+---
 ## Manifest
 
 - EOS Version: 1.0.0

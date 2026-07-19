@@ -1,3 +1,20 @@
+---
+identifier: RP-007 Repository Review & Compliance Standard
+title: RP 007 Repository Review & Compliance Standard
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - IAS-001
+inherits_from:
+  - IAS-001
+---
 # RP-007 Repository Review & Compliance Standard
 
 **Repository Family:** Repository Standards (RP)

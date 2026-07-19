@@ -1,23 +1,20 @@
 ---
-id: [Template ID]
+identifier: RS-004 Engineering Principles
 title: RS-004 Engineering Principles
 version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Principles]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Research Specification Template
-eos_layer: Knowledge Layer
-principle_domain: [Specific Domain, e.g., API Design]
-principle_scope: Derivation of Enduring Engineering Philosophy
-successor: [Successor ID, if applicable]
-upstream: [RS-003]
-downstream: [Engineering Standards]
+status: Draft
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # RS-004 Engineering Principles
 
 ## Document Purpose

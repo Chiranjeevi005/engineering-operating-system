@@ -1,20 +1,20 @@
 ---
-id: [Standard ID e.g., ES-001]
+identifier: ES-Template
 title: [Standard Name e.g., Coding Standards]
 version: [1.0.0]
-status: [Draft | Review | Approved | Deprecated]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Engineering Standard
-eos_layer: Governance Layer
-engineering_scope: [Scope e.g., Software Development, CI/CD, Architecture]
-authoritative_source: [System of Record]
-referenced_by: [EA-001, EA-002, EA-003, EA-005]
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # [STANDARD NAME]
 
 ## Document Purpose

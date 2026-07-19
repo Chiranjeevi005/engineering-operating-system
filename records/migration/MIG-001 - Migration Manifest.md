@@ -1,10 +1,20 @@
 ---
 identifier: MIG-001
+title: MIG 001   Migration Manifest
 version: 1.0
 status: Active
-audience: Architects, Engineers, AI Assistants
+owner: Records
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Migration Record
+lifecycle: Record
+governed_by: 
+  - GHS-001
+inherits_from:
+  - GHS-001
 ---
-
 # MIG-001 — Migration Manifest
 
 ## Purpose

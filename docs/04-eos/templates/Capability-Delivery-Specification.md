@@ -1,16 +1,20 @@
 ---
-id: EA-003
+identifier: Capability-Delivery-Specification
 title: Capability Delivery Specification (CDS)
 version: 1.1
-status: Approved
-traceability:
-  capability:
-  design:
-  delivery:
-  adr: []
-  prr:
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-003: Capability Delivery Specification
 
 ## 1. Core Engineering Object: Capability Delivery

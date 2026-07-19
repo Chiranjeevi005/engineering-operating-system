@@ -1,16 +1,20 @@
 ---
-id: EA-002
+identifier: Capability-Design-Specification
 title: Capability Design Specification (CDS)
 version: 1.1
-status: Approved
-traceability:
-  capability:
-  design:
-  delivery:
-  adr: []
-  prr:
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-002: Capability Design Specification (CDS)
 
 ## 1. Core Engineering Object: Capability Design

@@ -1,26 +1,20 @@
 ---
-id: [Template ID]
+identifier: EA-005-Capability-Validation
 title: EA-005 Capability Validation
 version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Validation]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-capability_id: [Capability ID]
-capability_name: [Capability Name]
-capability_domain: [Domain]
-artifact_type: Engineering Asset Template
-eos_layer: Execution Layer
-engineering_scope: Capability Validation
-authoritative_source: [System of Record]
-successor: [Successor ID, if applicable]
-upstream: [EA-001, EA-002, EA-003]
-downstream: [Capability Acceptance, Production Release]
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Blueprint
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-005 Capability Validation
 
 ## Document Purpose

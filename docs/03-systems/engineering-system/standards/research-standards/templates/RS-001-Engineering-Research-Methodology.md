@@ -1,23 +1,20 @@
 ---
-id: [Template ID]
+identifier: RS-001-Engineering-Research-Methodology
 title: RS-001 Engineering Research Methodology
 version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Research]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Research Specification Template
-eos_layer: Knowledge Layer
-research_scope: Engineering Research Methodology
-authoritative_source: [System of Record]
-successor: [Successor ID, if applicable]
-upstream: [Upstream references, if applicable]
-downstream: [RS-002, RS-003, RS-004]
+status: Draft
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # RS-001 Engineering Research Methodology
 
 ## Document Purpose

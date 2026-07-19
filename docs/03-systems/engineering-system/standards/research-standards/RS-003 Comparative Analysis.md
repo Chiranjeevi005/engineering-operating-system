@@ -1,21 +1,19 @@
 ---
-id: [Template ID]
+identifier: RS-003 Comparative Analysis
 title: RS-003 Comparative Analysis
 version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Analysis]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Research Specification Template
-eos_layer: Knowledge Layer
-analysis_domain: [Specific Domain, e.g., API Design]
-analysis_scope: Evidence Comparison and Pattern Identification
-successor: [Successor ID, if applicable]
-upstream: [RS-002]
-downstream: [RS-004]
+status: Draft
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
 # RS-003 Comparative Analysis
 

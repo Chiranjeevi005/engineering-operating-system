@@ -1,18 +1,19 @@
-﻿---
-Title: Artifact Registry
-Document ID: EOS-014
-Version: 1.0
-Status: Approved
-Owner: Chief Engineering Architect
-Created: 2026-07-17
-Updated: 2026-07-17
-Dependencies: None
-Approval: Approved
-Classification: Internal
-Review Frequency: Annually
-Related Artifacts: None
-Next Review: 2027-07-17
 ---
-
+identifier: EOS-014
+title: Artifact Registry
+version: 1.0
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Guide
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
+---
 # Artifact Registry
 

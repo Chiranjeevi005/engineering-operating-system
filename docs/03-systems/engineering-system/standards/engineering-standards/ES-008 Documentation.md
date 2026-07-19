@@ -1,12 +1,20 @@
 ---
-repository_family: Engineering Standards (ES)
 identifier: ES-008
+title: ES 008 Documentation
 version: 1.0
-status: Approved
-owner: EOS EOS Architecture Board
-audience: Engineers, Architects, Contributors, AI Assistants
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Engineering Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # ES-008 Documentation Standards
 
 ## Document Purpose

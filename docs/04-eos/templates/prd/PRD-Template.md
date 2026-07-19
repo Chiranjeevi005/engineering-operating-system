@@ -1,28 +1,20 @@
 ---
-id: PRD-[PRODUCT_ID]
+identifier: PRD-Template
 title: Product Requirements Document (PRD) - [Product Name]
-
 version: 1.0
-status: PRODUCTION
-lifecycle: 🔒 FROZEN
-
-classification:
-  artifact_type: Business Foundation
-  eos_layer: Foundation
-  authoritative_source: Business
-  successor: Product Engineering Blueprint (PEB)
-
-owner: [Name or Role]
-reviewer: [Name or Role]
-approver: [Name or Role]
-
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-
-product: [Product Name]
-domain: [Primary Domain]
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # Product Requirements Document (PRD): [Product Name]
 
 ## Document Purpose

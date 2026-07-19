@@ -1,29 +1,20 @@
 ---
-id: "[PEB-ID]"
+identifier: PEB-Template
 title: "[Product Name] - Product Engineering Blueprint"
 version: "[0.1.0]"
-status: "[Draft | Active | Deprecated]"
-lifecycle: "[Discovery | Engineering | Maintenance]"
-owner: "[Owner Name/Team]"
-reviewer: "[Reviewer Name]"
-approver: "[Approver Name]"
-created: "[YYYY-MM-DD]"
-updated: "[YYYY-MM-DD]"
-product: "[Product Name]"
-domain: "[Domain Name]"
-classification:
-  artifact_type: Product Engineering Blueprint
-  eos_layer: Foundation
-  engineering_scope: Product
-  authoritative_source: Engineering
-  successor: EA-001 Capability Blueprint
-traceability:
-  upstream:
-    - "[PRD-ID]"
-  downstream:
-    - "[EA-001-*]"
+status: Draft
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # Product Engineering Blueprint (PEB)
 
 ## Document Purpose

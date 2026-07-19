@@ -1,3 +1,20 @@
+---
+identifier: Engineering-Profile-Catalog
+title: Engineering Profile Catalog
+version: 1.0
+status: Active
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Profile
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
+---
 # Engineering Profile Catalog & Taxonomy
 
 ## Document Purpose

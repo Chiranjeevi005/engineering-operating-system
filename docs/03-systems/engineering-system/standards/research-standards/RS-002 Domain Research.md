@@ -1,25 +1,20 @@
 ---
-id: [Template ID]
+identifier: RS-002 Domain Research
 title: RS-002 Domain Research
 version: [1.1.0]
-status: [Draft | Review | Approved | Rejected]
-lifecycle: [Research]
-owner: [Owner Name / Role]
-reviewer: [Reviewer Name / Role]
-approver: [Approver Name / Role]
-created: [YYYY-MM-DD]
-updated: [YYYY-MM-DD]
-artifact_type: Research Specification Template
-eos_layer: Knowledge Layer
-research_domain: [Specific Domain, e.g., API Design]
-research_scope: Domain Knowledge Collection
-research_type: [Primary Research | Secondary Research | Literature Review | Standards Review | Mixed]
-research_status: [Planned | In Progress | Completed | Archived]
-successor: [Successor ID, if applicable]
-upstream: [RS-001]
-downstream: [RS-003]
+status: Draft
+owner: Engineering System
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: System Standard
+lifecycle: System
+governed_by: 
+  - ENG-001
+inherits_from:
+  - OM-001
 ---
-
 # RS-002 Domain Research
 
 ## Document Purpose

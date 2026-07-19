@@ -1,16 +1,20 @@
 ---
-id: EA-005
+identifier: Production-Readiness-Review
 title: Production Readiness Review (PRR)
 version: 1.1
-status: Approved
-traceability:
-  capability: ""
-  design: ""
-  delivery: ""
-  adr: []
-  prr: ""
+status: Active
+owner: EOS
+audience: 
+  - Architects
+  - Engineers
+  - AI Assistants
+category: Template
+lifecycle: EOS
+governed_by: 
+  - EOS
+inherits_from:
+  - ENG-001
 ---
-
 # EA-005: Production Readiness Review
 
 ## 1. Core Engineering Object: Production Readiness
