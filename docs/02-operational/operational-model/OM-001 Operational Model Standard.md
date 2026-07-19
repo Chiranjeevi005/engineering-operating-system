@@ -1,77 +1,277 @@
+
 ---
 identifier: OM-001
-title: OM 001 Operational Model Standard
+title: Operational Model Standard
 version: 1.0
-status: Active
+status: Draft
 owner: Operational
-audience: 
+audience:
   - Architects
   - Engineers
   - AI Assistants
 category: Operational Standard
 lifecycle: Operational
-governed_by: 
-  - GHS-001
+governed_by:
+  - AOS-001
 inherits_from:
-  - GHS-001
+  - AOS-001
 ---
 # OM-001 — Operational Model Standard
 
+> **Architecture Blueprint**
+>
+> This document defines the architectural structure of the Operational Model Standard (OM-001). It establishes the sections, responsibilities, and information hierarchy that will be used when authoring the normative Operational Model Standard.
+
+---
+
+# Purpose
+
+The Operational Model Standard defines how governed engineering work is performed throughout the Human-Centered Artificial Intelligence Software Development Lifecycle (HC-AI SDLC).
+
+Unlike governance standards, which establish authority and constraints, the Operational Model Standard defines the execution model that transforms governed intent into engineering outcomes.
+
+---
+
+# Scope
+
+The Operational Model Standard shall establish:
+
+- The operational philosophy of the HC-AI SDLC.
+- The lifecycle through which work progresses.
+- Operational states and transitions.
+- Human and AI operational responsibilities.
+- Operational activities.
+- Inputs and outputs.
+- Traceability requirements.
+- Verification integration.
+- Continuous operational improvement.
+
+---
+
+# Information Architecture
+
 ## 1. Purpose
-The **Operational Model Standard (OM-001)** translates Level 1 Governance into abstract, repeatable lifecycles and process workflows. It defines the universal conceptual models—the physics of the HC-AI SDLC—that govern how engineering objects exist, evolve, and relate to one another. 
 
-While Systems (Level 3) define *how* specific tasks are executed (e.g., Coding Standards, Testing Rules), the Operational Model defines the fundamental lifecycle phases and state constraints that apply to *everything*.
+Defines why the Operational Model exists.
 
-## 2. The Engineering Object Model
-Everything inside the HC-AI SDLC is an **Engineering Object**. Whether it is an Artifact, Capability, Decision, Risk, Workflow, or Release—it is derived from a single parent abstraction.
+---
 
-Every Engineering Object automatically inherits the following attributes:
-- **Owner:** Explicit accountability (one owner per object).
-- **Lifecycle:** The conceptual progression (Where am I?).
-- **State:** The condition within a lifecycle stage (What is my condition?).
-- **Traceability:** Unbroken lineage linking it to business value or architecture.
-- **Metadata:** Standardized identification.
+## 2. Operational Philosophy
 
-## 3. The Lifecycle Model
-The Lifecycle Model governs the conceptual progression of an object from inception to termination.
+Defines the fundamental philosophy that guides execution throughout the HC-AI SDLC.
 
-### Universal Lifecycle Flow
-1. **Inception:** Need is identified.
-2. **Definition:** Boundaries and requirements are specified.
-3. **Architecture:** Solution is designed (Gate: Architecture Freeze).
-4. **Implementation:** Construction and authoring begins.
-5. **Verification:** Technical proof it works.
-6. **Release:** Formal deployment or publishing.
-7. **Operation:** Running, monitoring, and active use.
-8. **Feedback:** Gathering telemetry and consumer insight.
-9. **Improvement:** Identifying upgrades, which triggers a new cycle.
-10. **Deprecation:** Safe sunsetting and archiving.
+Topics include:
 
-## 4. The State Model
-While Lifecycle answers *Where am I?*, State answers *What is my condition?*
+- Human-centered execution
+- Governed engineering
+- Incremental delivery
+- Continuous verification
+- Collaboration between humans and AI
 
-### Universal State Machine & Document Lifecycle
-- **Draft:** Work in progress; highly malleable. Downstream dependencies cannot rely on a Draft.
-- **In Review:** Frozen for evaluation; awaiting a decision. Cannot be modified by the author.
-- **Changes Requested:** Blocked by reviewers; requires remediation.
-- **Approved:** Validated against criteria; awaiting final lock or execution.
-- **Active / Locked:** Immutable state. Any further changes require a new version.
-- **Superseded:** Obsolete because a newer version or completely new document has replaced it.
-- **Legacy:** Maintained solely for transitional reference; physically untouched but logically obsolete.
-- **Archived:** Historical reference only. Terminal, read-only state.
+---
 
-## 5. Traceability and Constraints
-To ensure architectural integrity, the Operational Model enforces strict constraints:
+## 3. Operational Principles
 
-- **No Orphans:** An engineering object without an upstream trace is technical debt and must be justified.
-- **Bidirectionality:** Traceability must be navigable both top-down (intent to execution) and bottom-up (execution to intent).
-- **Acyclicity:** Circular dependencies between domains, capabilities, or artifacts are mathematically prohibited.
-- **Evidence Causality:** Evidence must exist *before* acceptance or state transition.
+Defines the principles that govern operational execution.
 
-## 6. Review Model
-Formal evaluation mechanisms are required to transition objects through their states:
-- **Architecture Review:** Alignment with patterns and constraints (Authority: Architecture Board / Chief Architect).
-- **Capability Review:** Business value (Authority: Product Owner).
-- **Security / Assurance Review:** Threat models and risk mitigation.
-- **Quality Review:** Test coverage and verification evidence.
-- **Repository Review:** Adherence to domain boundaries and EOS structure standards.
+Examples include:
+
+- Governance before execution
+- Human accountability
+- Iterative development
+- Traceable decisions
+- Continuous learning
+- Reusability
+- Quality by design
+
+---
+
+## 4. Operational Lifecycle
+
+Defines the complete lifecycle through which work progresses from idea to delivered product.
+
+This section establishes:
+
+- Lifecycle phases
+- Phase objectives
+- Entry criteria
+- Exit criteria
+- Operational flow
+
+This becomes the canonical lifecycle for the HC-AI SDLC.
+
+---
+
+## 5. Operational States
+
+Defines the states through which work items progress.
+
+Examples include:
+
+- Proposed
+- Planned
+- Active
+- Under Review
+- Verified
+- Approved
+- Released
+- Archived
+
+State transitions shall be explicitly defined.
+
+---
+
+## 6. Operational Roles
+
+Defines operational responsibilities.
+
+Examples include:
+
+- Human Architect
+- Engineer
+- Reviewer
+- AI Assistant
+- Product Owner
+- Stakeholder
+
+This section defines responsibilities rather than organizational job titles.
+
+---
+
+## 7. Operational Activities
+
+Defines the activities performed during execution.
+
+Examples include:
+
+- Planning
+- Analysis
+- Design
+- Specification
+- Development
+- Verification
+- Validation
+- Documentation
+- Release
+- Maintenance
+
+Activities shall remain independent of specific technologies.
+
+---
+
+## 8. Operational Inputs
+
+Defines the information required before an activity begins.
+
+Examples include:
+
+- Requirements
+- Standards
+- Specifications
+- Decisions
+- Research
+- Previous artifacts
+
+---
+
+## 9. Operational Outputs
+
+Defines the expected outcomes of operational activities.
+
+Examples include:
+
+- Documents
+- Source code
+- Specifications
+- Templates
+- Reports
+- Records
+- Verification evidence
+- Product increments
+
+---
+
+## 10. Operational Traceability
+
+Defines how work remains connected throughout the lifecycle.
+
+Topics include:
+
+- Requirement traceability
+- Decision traceability
+- Artifact traceability
+- Verification traceability
+- Product traceability
+
+---
+
+## 11. Operational Verification
+
+Defines how verification integrates into every stage of execution.
+
+Topics include:
+
+- Continuous verification
+- Review checkpoints
+- Quality gates
+- Acceptance criteria
+- Compliance verification
+
+Verification is treated as a continuous operational responsibility rather than a final phase.
+
+---
+
+## 12. Continuous Improvement
+
+Defines how operational execution evolves.
+
+Topics include:
+
+- Feedback loops
+- Lessons learned
+- Process optimization
+- Framework evolution
+- Operational maturity
+
+Improvements shall preserve governance alignment and backward compatibility where reasonably possible.
+
+---
+
+# Relationship to Lower Standards
+
+The Operational Model Standard serves as the parent operational document for:
+
+- Engineering Standards
+- Verification Standards
+- Specification Standards
+- Repository Standards
+- Research Standards
+- Process Standards
+- Engineering Profiles
+- Implementation Guides
+
+These standards implement specific aspects of the operational model without redefining it.
+
+---
+
+# Relationship to EOS
+
+The Engineering Operating System (EOS) implements the Operational Model through reusable engineering assets, templates, blueprints, automation, tooling, and workflows.
+
+The Operational Model defines **how work is performed**.
+
+The EOS provides **the assets used to perform that work**.
+
+---
+
+# Relationship to Products
+
+Products execute the Operational Model through concrete implementation.
+
+Every product developed under the HC-AI SDLC shall inherit applicable governance, operational, and engineering standards.
+
+---
+
+# Planned Deliverable
+
+The final normative version of OM-001 shall expand each architectural section into a complete operational standard while preserving this information architecture and maintaining full alignment with the governance hierarchy.

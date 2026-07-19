@@ -1,6 +1,6 @@
 ---
 identifier: ES-001
-title: ES 001 Foundation
+title: Engineering Standard
 version: 1.0
 status: Active
 owner: Engineering System
