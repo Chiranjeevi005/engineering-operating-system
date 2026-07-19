@@ -49,3 +49,6 @@ Examples of this rule in practice:
 
 ## 4. Evidence (Records)
 Records exist outside the prescriptive governance hierarchy. They are descriptive proof of execution (e.g., ADRs, logs, reports). They have zero governing authority.
+
+## 5. Migration and Traceability
+> **Migration activities shall preserve historical traceability while ensuring that only one document remains authoritative for any given responsibility.**

@@ -3,7 +3,7 @@
 **Repository Family:** Repository Standards (RP)
 **Identifier:** RP-002
 **Version:** 1.0
-**Status:** Active
+**Status:** Superseded by IAS-001
 **Owner:** EOS Team
 **Audience:** All Engineering Personnel, Platform Architects, and Automated Systems
 
