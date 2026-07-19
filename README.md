@@ -1,22 +1,3 @@
-git add.
-
-Generate a git commit message using this strict format:
-
-<type></type>(scope): <what changed></what>
-
-Constraints:
-
-* Choose type only from: feat, fix, refactor, docs, test, chore
-* Scope must be one word (feature/module name)
-* Summary must be specific, present tense, ≤72 chars
-* No vague words like "update", "change", "improve"
-
-Output only the commit message. No explanations.
-
-git push origin main
-
-execute this comman
-
 # HC-AI Software Development Lifecycle (SDLC) v1.0
 
 Welcome to the **Human-Centered AI Software Development Lifecycle (HC-AI SDLC)** repository. This repository acts as the single source of truth for the governance, processes, systems, and tools that power an AI-augmented engineering operating model.
